@@ -1,609 +1,259 @@
 <!DOCTYPE html>
-<html lang="ru"><head><meta charset="utf-8">
+<html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Anime Adventures — Value List</title>
 <style>
-:root{--gs:"Google Sans","Product Sans",Roboto,"Segoe UI",Arial,sans-serif;--tx:Roboto,"Segoe UI",Arial,sans-serif;
---bg:#f9fbfd;--card:#fff;--ink:#202124;--mu:#5f6368;--dis:#80868b;--ln:#dadce0;--grid:#e0e0e0;--hov:#f1f3f4;--hd:#f8f9fa;--band:#f1f3f4;
---ac:#1a73e8;--acb:#e8f0fe;--acf:#1967d2;--bt:#1a73e8;--btt:#fff;--bth:#1765cc;--pill:#edf2fa;--vt:#137333;
---g-bg:#e6f4ea;--g-t:#137333;--gg-bg:#ceead6;--gg-t:#0d652d;--y-bg:#fef7e0;--y-t:#b06000;--r-bg:#fce8e6;--r-t:#c5221f;--n-bg:#f1f3f4;--n-t:#5f6368;--b-t:#1967d2;--o-t:#e8710a;
---nbg:#fef7e0;--nbd:#f9ab00;--toast:#323232;--toastt:#fff;--shadow:0 1px 2px rgba(60,64,67,.15);--ssh:0 1px 3px rgba(60,64,67,.3);
---kS:#8430ce;--kA:#1a73e8;--kB:#188038;--kC:#80868b;--sht:#b06000;--shb:#f9ab00;--rbt:#8430ce;--tabbar:#f1f3f4;--tabon:#fff;--tabhov:#e8eaed;
---tbt:calc(56px + env(safe-area-inset-top,0px));--tabh:40px;--ga:10%;color-scheme:light}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1f1f1f;--card:#2d2e30;--ink:#e3e3e3;--mu:#9aa0a6;--dis:#80868b;--ln:#444746;--grid:#444746;--hov:rgba(232,234,237,.08);--hd:#333537;--band:#38393c;
---ac:#8ab4f8;--acb:rgba(138,180,248,.16);--acf:#8ab4f8;--bt:#8ab4f8;--btt:#202124;--bth:#aecbfa;--pill:#37393b;--vt:#81c995;
---g-bg:rgba(129,201,149,.16);--g-t:#81c995;--gg-bg:rgba(129,201,149,.28);--gg-t:#a8dab5;--y-bg:rgba(253,214,99,.16);--y-t:#fdd663;--r-bg:rgba(242,139,130,.16);--r-t:#f28b82;--n-bg:rgba(154,160,166,.16);--n-t:#bdc1c6;--b-t:#8ab4f8;--o-t:#fcad70;
---nbg:rgba(249,171,0,.12);--toast:#e3e3e3;--toastt:#1f1f1f;--shadow:0 1px 2px rgba(0,0,0,.4);--ssh:0 1px 3px rgba(0,0,0,.5);
---kS:#c58af9;--kA:#8ab4f8;--kB:#81c995;--kC:#9aa0a6;--sht:#fdd663;--shb:rgba(253,214,99,.5);--rbt:#c58af9;--tabbar:#252628;--tabon:#2d2e30;--tabhov:#38393c;--ga:14%;color-scheme:dark}}
-:root[data-theme=dark]{--bg:#1f1f1f;--card:#2d2e30;--ink:#e3e3e3;--mu:#9aa0a6;--dis:#80868b;--ln:#444746;--grid:#444746;--hov:rgba(232,234,237,.08);--hd:#333537;--band:#38393c;
---ac:#8ab4f8;--acb:rgba(138,180,248,.16);--acf:#8ab4f8;--bt:#8ab4f8;--btt:#202124;--bth:#aecbfa;--pill:#37393b;--vt:#81c995;
---g-bg:rgba(129,201,149,.16);--g-t:#81c995;--gg-bg:rgba(129,201,149,.28);--gg-t:#a8dab5;--y-bg:rgba(253,214,99,.16);--y-t:#fdd663;--r-bg:rgba(242,139,130,.16);--r-t:#f28b82;--n-bg:rgba(154,160,166,.16);--n-t:#bdc1c6;--b-t:#8ab4f8;--o-t:#fcad70;
---nbg:rgba(249,171,0,.12);--toast:#e3e3e3;--toastt:#1f1f1f;--shadow:0 1px 2px rgba(0,0,0,.4);--ssh:0 1px 3px rgba(0,0,0,.5);
---kS:#c58af9;--kA:#8ab4f8;--kB:#81c995;--kC:#9aa0a6;--sht:#fdd663;--shb:rgba(253,214,99,.5);--rbt:#c58af9;--tabbar:#252628;--tabon:#2d2e30;--tabhov:#38393c;--ga:14%;color-scheme:dark}
+:root{--tx:"Google Sans Text","Google Sans",Roboto,Arial,"Helvetica Neue",sans-serif;--mono:"Roboto Mono","Courier New",ui-monospace,monospace;--gs:var(--tx);
+--bg:#f6f8fc;--card:#fff;--ink:#202124;--mu:#5f6368;--ln:#3c4043;--gl:#e0e3e8;--hov:#eef1f6;--tabon:#fff1cc;--sb:#eaf1fb;--sd:0 1px 3px rgba(60,64,67,.22);--ac:#ff9900;--act:#000;--link:#1a73e8;
+--cv:#b6d7a8;--cvt:#000;--nbg:#fff2cc;--toast:#323232;--toastt:#fff;--tbt:56px;--tabh:76px;color-scheme:light}
+body{--x:0}
+:root[data-theme=dark]{--bg:#17181a;--card:#25262a;--ink:#e8eaed;--mu:#9aa0a6;--ln:#0e0e0f;--gl:#3c3f44;--hov:#33353a;--tabon:#4a3d12;--sb:#33353a;--sd:0 1px 3px rgba(0,0,0,.5);--link:#8ab4f8;--cv:#3f6a38;--cvt:#f1f8ee;--nbg:#4a4120;--toast:#e8eaed;--toastt:#202124;color-scheme:dark}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:13px/1.4 var(--tx);min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;padding-bottom:calc(var(--tabh) + env(safe-area-inset-bottom,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.4 var(--tx);min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;padding-bottom:calc(var(--tabh) + env(safe-area-inset-bottom,0px));overflow-x:hidden}
 button,input,select{font:inherit;color:inherit}
 svg.i{flex:none;display:block}
-a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
-:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
-.table :focus-visible,.card :focus-visible,.side :focus-visible,.tabs :focus-visible{outline-offset:-2px}
-button,.row,.band,.chip,.btn,.srt,select,.ib{transition:background-color .12s ease,color .12s ease,border-color .12s ease,box-shadow .12s ease}
+a{color:var(--link)}
+:focus-visible{outline:2px solid #1a73e8;outline-offset:-2px}
+button,select,.row,.band{transition:background-color .08s,color .08s}
 
 /* top bar */
-.top{position:sticky;top:0;z-index:30;height:var(--tbt);display:flex;align-items:center;gap:12px;padding:env(safe-area-inset-top,0px) 16px 0;background:var(--card);border-bottom:1px solid var(--ln)}
-.logo{width:32px;height:32px;border-radius:6px;background:#ff9800;display:grid;place-items:center;color:#202124;font:500 14px var(--gs);flex:none}
-.ttl{font:400 18px/1.2 var(--gs);white-space:nowrap}
-.ttl small{display:block;margin-top:1px;font:400 12px/1.2 var(--tx);color:var(--mu);letter-spacing:.2px}
-.search{flex:1;max-width:720px;margin:0 auto;position:relative}
-.search svg{position:absolute;left:14px;top:10px;color:var(--mu);pointer-events:none}
-.search input{width:100%;height:40px;border-radius:24px;border:0;background:var(--pill);padding:0 16px 0 46px;font-size:14px;outline-offset:2px}
+.top{position:sticky;top:0;z-index:30;height:var(--tbt);display:flex;align-items:center;gap:12px;padding:env(safe-area-inset-top,0px) 14px 0;background:var(--card);box-shadow:var(--sd)}
+.logo{width:36px;height:36px;background:var(--ac);color:#000;display:grid;place-items:center;font:700 15px var(--tx);flex:none;border-radius:10px}
+.logo i{font-style:normal}
+.ttl{font:500 18px/1.1 var(--tx);white-space:nowrap}
+.ttl small{display:block;margin-top:2px;font:400 12px var(--tx);color:var(--mu)}
+.search{flex:1;max-width:520px;margin:0 auto 0 12px;position:relative}
+.search svg{position:absolute;left:14px;top:12px;color:var(--mu);pointer-events:none}
+.search input{width:100%;height:44px;border:1px solid transparent;border-radius:24px;background:var(--sb);padding:0 16px 0 44px;font-size:14px}
 .search input::placeholder{color:var(--mu)}
-.search input:hover{background:color-mix(in srgb,var(--pill) 80%,var(--ink) 6%)}
-.search input:focus{background:var(--card);box-shadow:var(--ssh)}
-.ib{width:40px;height:40px;border-radius:50%;border:0;background:transparent;color:var(--mu);cursor:pointer;flex:none;display:grid;place-items:center}
-.ib:hover{background:var(--hov)}.ib:active{background:var(--ln)}
+.search input:focus{outline:none;border-color:#1a73e8;background:var(--card);box-shadow:0 0 0 1px #1a73e8}
+.ib{width:38px;height:38px;border:1px solid var(--gl);border-radius:50%;background:var(--card);color:var(--ink);cursor:pointer;display:grid;place-items:center;flex:none}
+.ib:hover{background:var(--hov)}
+.seg{display:flex;flex:none;border:1px solid var(--gl);border-radius:18px;overflow:hidden;margin-left:auto}
+.search+.seg{margin-left:0}
+.seg button{border:0;background:var(--card);height:36px;min-width:40px;padding:0 10px;font:500 13px var(--tx);cursor:pointer;color:var(--mu)}
+.seg button+button{border-left:1px solid var(--gl)}
+.seg button:hover{background:var(--hov);color:var(--ink)}
+.seg button.on{background:var(--ac);color:#000;font-weight:700}
 
-main{max-width:1280px;width:100%;margin:0 auto;padding:16px 20px 0;flex:1 0 auto}
-.spons{flex:none;margin-top:24px;padding:0 16px 16px;text-align:center;font-size:12px;line-height:1.4;color:var(--mu)}.spons b{font-weight:500}
+main{max-width:1240px;width:100%;margin:0 auto;padding:14px 16px 0;flex:1 0 auto}
+.spons{flex:none;margin-top:24px;padding:0 16px 16px;text-align:center;font:400 12px var(--tx);color:var(--mu)}.spons b{color:var(--ink)}
 
-/* note */
-.note{display:flex;gap:12px;align-items:flex-start;background:var(--nbg);border-left:3px solid var(--nbd);border-radius:4px;padding:10px 14px;font-size:13px;line-height:1.4;color:var(--ink);margin-bottom:12px}
-.note svg{color:var(--sht);margin-top:0}.note b{font-weight:500}
+.note{display:flex;gap:10px;align-items:flex-start;background:var(--nbg);color:var(--ink);border:0;border-left:4px solid var(--ac);border-radius:8px;padding:10px 14px;font-size:13px;margin-bottom:14px;box-shadow:var(--sd)}
+.note svg{color:var(--mu);margin-top:1px}
 
 /* toolbar */
-.tools{display:flex;gap:4px;flex-wrap:wrap;align-items:center;min-height:40px;padding:4px 8px;background:var(--card);border:1px solid var(--ln);border-bottom-color:var(--ln);border-radius:8px 8px 0 0;margin-bottom:-1px;position:relative;z-index:1}
-.tools.free{border-radius:8px;margin-bottom:0;gap:8px;padding:8px}
-.sp{width:1px;height:20px;background:var(--ln);margin:0 4px;flex:none}
-.chip,select{height:32px;border-radius:4px;border:0;background-color:transparent;padding:0 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--ink)}
-.chip{display:inline-flex;align-items:center;gap:6px}
-.chip svg{color:var(--mu)}
-.chip:hover,select:hover{background-color:var(--hov)}.chip:active{background-color:var(--ln)}
-.chip.on{background-color:var(--acb);color:var(--acf)}.chip.on svg{color:var(--acf)}
-select{appearance:none;-webkit-appearance:none;padding-right:28px;font-weight:400;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2380868b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 6px center;background-size:16px}
+.tools{display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding:8px 10px;border:1px solid var(--ln);border-bottom:0;background:var(--card);border-radius:0;box-shadow:var(--sd)}
+.tools.free{border:0;gap:8px;background:none;margin-top:12px}
+.sp{display:none}
+.chip,select{height:34px;border:1px solid var(--gl);border-radius:17px;background:transparent;padding:0 14px;cursor:pointer;font:500 13px var(--tx);color:var(--ink)}
+.chip{display:inline-flex;align-items:center;gap:8px}
+.chip:hover,select:hover{background-color:var(--hov)}
+.chip.on{background:var(--tabon);border-color:var(--ac);color:var(--ink)}.chip.on svg{color:#e69100}
+.chip svg{width:16px;height:16px}
+select{appearance:none;-webkit-appearance:none;padding-right:32px;padding-left:14px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;background-size:14px}
 select option{background:var(--card);color:var(--ink)}
-.chip:disabled,select:disabled{color:var(--dis);cursor:default;background-color:transparent}
-.cnt{margin-left:auto;color:var(--mu);font-size:12px;padding:0 4px}
+.cnt{margin-left:auto;align-self:center;padding:0 14px;font:400 12px var(--tx);color:var(--mu)}
 
-/* buttons */
-.btn{height:32px;padding:0 16px;border-radius:4px;border:1px solid var(--ln);background:transparent;color:var(--ac);font:500 13px var(--gs);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;white-space:nowrap}
-.btn:hover{background:var(--acb);text-decoration:none}.btn:active{background:var(--ln)}
-.btn.pri{background:var(--bt);border-color:var(--bt);color:var(--btt)}
-.btn.pri:hover{background:var(--bth);border-color:var(--bth);color:var(--btt)}
-.btn:disabled{color:var(--dis);border-color:var(--ln);background:transparent;cursor:default}
-.btn.pri:disabled{background:var(--hov);border-color:var(--hov);color:var(--dis)}
-.btn.ic{width:32px;padding:0}
+.btn{height:38px;padding:0 18px;border:1px solid var(--gl);border-radius:19px;background:var(--card);color:var(--ink);font:500 13px var(--tx);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;white-space:nowrap}
+.btn:hover{background:var(--hov);text-decoration:none}
+.btn.pri{background:var(--ac);color:#000;border-color:var(--ac);font-weight:700}.btn.pri:hover{filter:brightness(.93)}
+.btn.ic{width:38px;padding:0;border-radius:50%}
 
-/* table (sheet) */
-.table{background:var(--card);border:1px solid var(--ln);border-radius:8px;box-shadow:var(--shadow);overflow:clip;font-family:var(--tx)}
-.tools+.table{border-radius:0 0 8px 8px}
+/* table: as in the sheet */
+.table{border:1px solid var(--ln);background:var(--card);border-radius:0;overflow:clip;box-shadow:var(--sd)}
+.tools+.table{border-radius:0}
 .head,.row{display:grid;grid-template-columns:var(--cols);align-items:stretch}
-.head{position:sticky;top:var(--tbt);z-index:5;background:var(--hd);color:var(--mu);font-size:12px;font-weight:500}
-.head>div{padding:0 12px;min-height:32px;display:flex;align-items:center;gap:4px;user-select:none;min-width:0}
-.head>div+div{border-left:1px solid var(--grid)}
-.head .hv,.head .hr{justify-content:flex-end;text-align:right}.head .hd,.head .ht{justify-content:center}
-.head .srt{cursor:pointer}.head .srt:hover{background:var(--hov);color:var(--ink)}.head .srt:active{background:var(--ln)}
-.head .srt svg{color:var(--acf)}
-.band{display:flex;align-items:center;gap:8px;padding:0 12px 0 8px;min-height:36px;background:var(--band);font:500 14px var(--gs);cursor:pointer;user-select:none;border-top:1px solid var(--grid)}
-.band:hover{background:color-mix(in srgb,var(--band) 90%,var(--ink) 6%)}
-.band small{font:400 12px var(--tx);color:var(--mu)}
-.band .n2{margin-left:auto;color:var(--mu);font:400 12px var(--tx);font-variant-numeric:tabular-nums}
-.chev{display:inline-flex;color:var(--mu);transition:transform .12s ease}.band.shut .chev{transform:rotate(-90deg)}.band.shut+.grp{display:none}
-.dot{width:8px;height:8px;border-radius:2px;flex:none;background:var(--kC)}
-.kS{background:var(--kS)}.kA{background:var(--kA)}.kB{background:var(--kB)}.kC{background:var(--kC)}
-.row{border-top:1px solid var(--grid);position:relative;min-height:34px}
-.row[data-k]{cursor:pointer;outline:none}.row[data-k]:focus,.row[data-k]:focus-visible{outline:none}
-.row:hover{background:var(--hov)}
-.row.open{z-index:2;background:var(--card)}
-.row[data-glow]{isolation:isolate}
-.row[data-glow]::before,.row[data-glow]::after{content:"";position:absolute;pointer-events:none;opacity:0;transition:opacity .18s ease}
-.row[data-glow]::before{inset:0;z-index:0;background:linear-gradient(90deg,color-mix(in srgb,var(--glow) var(--ga),transparent) 0%,transparent 28%)}
-.row[data-glow]::after{left:0;top:0;bottom:0;width:3px;z-index:3;background:var(--glow)}
-.row[data-glow] .c,.row[data-glow] .act{position:relative;z-index:1}
-.row[data-glow].open::before,.row[data-glow].open::after{opacity:1}
-
-@media(hover:hover){.row[data-glow]:hover{background:var(--card)}.row[data-glow]:hover::before,.row[data-glow]:hover::after{opacity:1}}
-.c{padding:6px 12px;display:flex;align-items:center;justify-content:center;min-width:0}
-.c+.c{border-left:1px solid var(--grid)}
-.c.n{justify-content:flex-start;font-weight:500;gap:6px;flex-wrap:wrap}
-.c.v{color:var(--vt);font-weight:500;font-variant-numeric:tabular-nums;justify-content:flex-end;text-align:right;background:transparent}
-.c.v.oc{font-size:12px;background:var(--g-bg);line-height:1.3}
-.c.r{justify-content:flex-end;font-variant-numeric:tabular-nums;color:var(--ink)}.lb{display:none}
-.c.i{justify-content:flex-start;color:var(--mu)}
-.pill{display:inline-flex;align-items:center;justify-content:center;height:20px;min-width:28px;padding:0 8px;border-radius:4px;font-weight:500;font-size:12px;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
-.d-vh{background:var(--gg-bg);color:var(--gg-t)}.d-h{background:var(--g-bg);color:var(--g-t)}.d-a{background:var(--n-bg);color:var(--n-t)}.d-l{background:var(--y-bg);color:var(--y-t)}.d-vl{background:var(--r-bg);color:var(--r-t)}
-.t-s{background:var(--g-bg);color:var(--g-t)}.t-u{background:var(--y-bg);color:var(--y-t)}.t-o{background:var(--r-bg);color:var(--r-t)}
-.t-r{background:var(--gg-bg);color:var(--gg-t)}.t-d{background:var(--r-bg);color:var(--r-t)}
-.sh,.rb{display:inline-flex;align-items:center;height:18px;padding:0 6px;border-radius:4px;font-size:11px;font-weight:500;line-height:1;background:transparent}
-.sh{color:var(--sht);border:1px solid var(--shb)}
-.rb{color:var(--rbt);border:1px solid currentColor}
-.act{grid-column:1/-1;display:none;gap:8px;padding:8px 12px 10px;border-top:1px solid var(--grid)}.row.open .act{display:flex}
-.empty{padding:24px;text-align:center;color:var(--mu);font-size:13px}
-.sec{background:var(--band);color:var(--ink);font:500 14px var(--gs);padding:8px 12px;border-top:1px solid var(--grid)}
+.head{position:sticky;top:var(--tbt);z-index:5;background:#202124;color:#fff;font:700 14px var(--tx)}
+.head>div{padding:0 10px;min-height:32px;display:flex;align-items:center;justify-content:center;gap:6px;user-select:none;min-width:0;border-right:1px solid #444}
+.head>div:last-child{border-right:0}
+.head .srt{cursor:pointer}.head .srt:hover{background:#2b2b2b}.head .srt svg{color:var(--ac)}
+.band{display:flex;align-items:center;justify-content:center;gap:10px;padding:0 44px;min-height:34px;background:#ff9900;color:#000;border-bottom:1px solid var(--ln);border-top:1px solid var(--ln);font:700 18px var(--tx);cursor:pointer;user-select:none;position:relative}
+.band:hover{background:#f29100}
+.band .dot{display:none}
+.band .chev{position:absolute;left:8px;color:#000}
+.band small{font:700 11px var(--tx);color:#000}.band small:empty{display:none}
+.band .n2{position:absolute;right:10px;font:700 12px var(--mono);color:#000}
+.chev{display:inline-flex}.band.shut .chev{transform:rotate(-90deg)}.band.shut+.grp{display:none}
+.row{position:relative;min-height:32px;background:var(--card)}
+.row[data-k]{cursor:pointer;outline:none}
+.row:hover .c{filter:brightness(.93)}
+.row.open .c{filter:brightness(.9)}
+.row:focus-visible{outline:2px solid #1a73e8;outline-offset:-2px}
+.row::after{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--glow,transparent);opacity:0;pointer-events:none}
+.row[data-glow]::after{opacity:1}
+.row[data-glow] .c.n{color:var(--glow)}.row[data-shiny] .c.n .sh{text-shadow:none}.row[data-shiny]::after{box-shadow:0 0 6px var(--glow)}.row[data-shiny] .c.n{text-shadow:0 0 6px color-mix(in srgb,var(--glow) 35%,transparent)}
+.c{padding:5px 10px;display:flex;align-items:center;min-width:0;border-right:1px solid var(--ln);border-bottom:1px solid var(--ln)}
+.c:last-child{border-right:0}
+.c.n{background:#202124;color:#fff;font-weight:700;gap:6px;flex-wrap:wrap;padding-left:14px}
+.c.v{justify-content:flex-end;text-align:right;font:700 14px var(--mono);background:var(--cv);color:var(--cvt);font-variant-numeric:tabular-nums}
+.c.v.oc{justify-content:center;font:700 13px var(--tx)}
+.c.d,.c.t{padding:0;align-items:stretch}
+.c.i{background:var(--cv);color:var(--cvt);font-weight:700;font-size:13px}
+.lb{display:none}
+.pill{display:flex;flex:1;align-items:center;justify-content:center;gap:6px;min-height:30px;padding:0 8px;font:700 14px var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:#000}
+.c.t .pill{font:700 13px var(--tx)}
+.d-vh{background:#00e600}.d-h{background:#6aa84f}.d-m{background:#93c47d}.d-a{background:#b6d7a8}.d-b{background:#fff2cc}.d-l{background:#e06666}.d-vl{background:#cc0000;color:#fff}.d-z{background:#fff}
+.pill.t-s{background:#3cb55e}.pill.t-h{background:#00ffff}.pill.t-u{background:#d5a6bd}.pill.t-o{background:#990000;color:#fff}.pill.t-r{background:#b6f23a}.pill.t-d{background:#e06666}
+.sh{color:#ffd966;font:inherit;font-weight:700}
+.rb{color:#ffd966;font:inherit;font-weight:700}
+.sh::before,.rb::before{content:"("}.sh::after,.rb::after{content:")"}
+.act{grid-column:1/-1;display:none;gap:8px;padding:8px 10px;border-bottom:1px solid var(--ln);background:var(--hov)}.act{justify-content:flex-start}.act .btn{flex:none;height:32px;padding:0 12px;font-size:12px;background:var(--card)}.act .btn:hover{background:var(--ac);border-color:var(--ac);color:#000}.row.open .act{display:flex;align-items:center}.act .eq{flex:1;display:flex;gap:8px;min-width:0}.act .eq .btn{flex:1 1 0;min-width:0;justify-content:space-between;gap:8px}.act .eq .btn span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.act .eq .btn svg{flex:none;opacity:.7}
+.table>.row:last-child>.c,.table>:last-child>.row:last-child>.c{border-bottom:0}.table>.row:last-child>.act,.table>:last-child>.row:last-child>.act{border-bottom:0}.table>.band:last-child,.table>.band.shut:nth-last-child(2){border-bottom:0}
+.empty{padding:28px;text-align:center;color:var(--mu);font-size:13px}
+.sec{background:#ff9900;color:#000;font:700 16px var(--tx);text-align:center;padding:6px 14px;border-bottom:1px solid var(--ln)}
 
 /* cards */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
-.card,.side{background:var(--card);border:1px solid var(--ln);border-radius:8px;overflow:hidden}
-.card h3,.side h3{margin:0;padding:10px 16px;font:500 14px var(--gs);border-bottom:1px solid var(--ln);display:flex;justify-content:space-between;align-items:center}
-.card .ln{display:flex;align-items:center;gap:10px;padding:8px 16px;font-size:13px}
-.card .ln+.ln{border-top:1px solid var(--grid)}
-.sw{display:inline-block;width:8px;height:8px;border-radius:2px;flex:none;background:currentColor}
-.sw-b{color:var(--b-t)}.sw-o{color:var(--o-t)}.sw-n{color:var(--n-t)}
-.srv .lk{padding:10px 16px;margin:12px 16px 0;border-radius:4px;font:12px/1.4 ui-monospace,Menlo,Consolas,monospace;word-break:break-all;background:var(--hov);color:var(--ink)}
-.srv .bt{display:flex;gap:8px;padding:12px 16px 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;align-items:start}
+.card,.side{background:var(--card);border:1px solid var(--gl);border-radius:12px;overflow:clip;box-shadow:var(--sd)}
+.card h3,.side h3{margin:0;padding:8px 14px;font:700 14px var(--tx);background:#202124;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.card .ln{display:flex;align-items:center;gap:12px;padding:9px 14px;font-size:13px}
+.card .ln+.ln{border-top:1px solid var(--gl)}
+.sw{display:inline-block;width:14px;height:14px;flex:none;background:currentColor;border:1px solid var(--ln)}
+.sw-b{color:#b6f23a}.sw-o{color:#e06666}.sw-n{color:#b7b7b7}
+.sw.t-s{background:#3cb55e}.sw.t-h{background:#00ffff}.sw.t-u{background:#d5a6bd}.sw.t-o{background:#990000}.sw.t-r{background:#b6f23a}.sw.t-d{background:#e06666}
+.srv .lk{padding:10px 12px;margin:14px;font:12px/1.45 var(--mono);word-break:break-all;background:var(--bg);border:1px solid var(--gl)}
+.srv .bt{display:flex;gap:8px;padding:0 14px 14px}
 
 /* calculator */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.side #tL,.side #tR{font-variant-numeric:tabular-nums;color:var(--vt)}
-.li{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:2px 8px 2px 16px;min-height:36px;border-top:1px solid var(--grid);font-size:13px;font-weight:500}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.side #tL,.side #tR{font:700 14px var(--mono);color:var(--ac)}
+.li{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:2px 6px 2px 14px;min-height:40px;border-top:1px solid var(--gl);font-size:13px;font-weight:700}
 .li:first-child{border-top:0}
 .li>span:last-child{display:flex;align-items:center;gap:4px}
-.li b{font-weight:500;color:var(--vt);font-variant-numeric:tabular-nums}
-.li .x{width:32px;height:32px;border:0;border-radius:50%;background:transparent;color:var(--mu);cursor:pointer;display:grid;place-items:center}
-.li .x:hover{background:var(--hov);color:var(--ink)}.li .x:active{background:var(--ln)}
-.res{margin:12px 0;text-align:left;font-size:18px;font-weight:400;background:var(--card);border:1px solid var(--ln);border-radius:4px;padding:10px 16px;min-height:48px}
-.sr{display:flex;align-items:center;gap:8px;padding:4px 8px 4px 16px;min-height:44px;font-size:13px}
-.sr+.sr{border-top:1px solid var(--grid)}
-.sr>span:first-child{flex:1;font-weight:500;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.sr .v2{color:var(--vt);font-size:13px;font-weight:500;font-variant-numeric:tabular-nums}
+.li b{font:700 13px var(--mono);background:var(--cv);color:var(--cvt);padding:2px 8px}
+.li .x{width:32px;height:32px;border:0;background:transparent;color:var(--mu);cursor:pointer;display:grid;place-items:center;border-radius:4px}
+.li .x:hover{background:var(--hov);color:var(--ink)}
+.res{margin:14px 0;font:700 16px var(--tx);background:var(--card);border:0;border-radius:12px;box-shadow:var(--sd);padding:12px 16px;min-height:48px;color:var(--ink)}
+.res[data-r=p]{background:#b6d7a8;color:#000}.res[data-r=m]{background:#ea9999;color:#000}.res[data-r=e]{background:#fff2cc;color:#000}
+.sr{display:flex;align-items:center;gap:8px;padding:4px 6px 4px 14px;min-height:44px;font-size:13px}
+.sr+.sr{border-top:1px solid var(--gl)}
+.sr>span:first-child{flex:1;font-weight:700;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.sr .v2{font:700 13px var(--mono)}
 
-/* sheet tabs */
-.tabs{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--tabbar);border-top:1px solid var(--ln);display:flex;gap:2px;overflow-x:auto;padding:0 8px env(safe-area-inset-bottom,0px);scrollbar-width:none}
+/* bottom dock */
+.tabs{position:fixed;left:10px;right:10px;margin:0 auto;width:max-content;max-width:calc(100% - 20px);bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:40;height:54px;padding:0 8px;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;border-radius:27px;background:color-mix(in srgb,var(--card) 80%,transparent);-webkit-backdrop-filter:blur(16px) saturate(1.5);backdrop-filter:blur(16px) saturate(1.5);border:1px solid color-mix(in srgb,var(--gl) 80%,transparent);box-shadow:0 10px 30px rgba(0,0,0,.22),0 2px 6px rgba(0,0,0,.12);animation:dockIn .7s cubic-bezier(.2,.9,.3,1.2) both}
 .tabs::-webkit-scrollbar{display:none}
-.tabs{justify-content:safe center}.tabs button:first-child{margin-left:auto}.tabs button:last-child{margin-right:auto}
-.tabs button{flex:none;height:var(--tabh);padding:0 16px;border:0;border-top:3px solid transparent;border-radius:0 0 4px 4px;background:none;color:var(--mu);font:500 14px var(--gs);cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center}
-.tabs button:hover{background:var(--tabhov)}
-.tabs button.on{background:var(--tabon);border-top-color:var(--ac);color:var(--ink);font-weight:600}
-.tabs b{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;margin-left:8px;border-radius:9px;background:var(--ln);color:var(--ink);font:500 11px var(--tx)}
+.tabs button{position:relative;z-index:1;flex:none;height:38px;margin:0 1px;padding:0 15px;border:0;border-radius:19px;background:none;color:var(--mu);font:500 14px var(--tx);cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;transition:color .25s,transform .15s}
+.tabs button:hover{color:var(--ink)}.tabs button:active{transform:scale(.94)}
+.tabs button.on{color:#000;font-weight:700}
+.tabs .ind{position:absolute;left:0;top:50%;height:38px;margin-top:-19px;width:0;border-radius:19px;background:var(--ac);box-shadow:0 4px 14px color-mix(in srgb,var(--ac) 45%,transparent);transition:transform .45s cubic-bezier(.3,1.25,.4,1),width .45s cubic-bezier(.3,1.25,.4,1);z-index:0;pointer-events:none}
+.tabs b{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;margin-left:8px;background:var(--ac);color:#000;font:700 11px var(--mono);border-radius:9px}
+.tabs button.on b{background:#000;color:var(--ac)}
 
-/* snackbar */
-#toast{position:fixed;left:16px;bottom:calc(var(--tabh) + 16px + env(safe-area-inset-bottom,0px));background:var(--toast);color:var(--toastt);padding:12px 16px;border-radius:4px;font-size:14px;z-index:60;opacity:0;pointer-events:none;transition:opacity .15s ease;box-shadow:0 1px 3px rgba(60,64,67,.3),0 4px 8px 3px rgba(60,64,67,.15);max-width:calc(100vw - 32px)}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--tabh) + 16px + env(safe-area-inset-bottom,0px));background:var(--toast);color:var(--toastt);padding:11px 18px;font:500 13px var(--tx);z-index:60;opacity:0;pointer-events:none;transition:opacity .1s;max-width:calc(100vw - 24px);border-radius:4px}
 
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* liquid glass */
+:root{--gls:rgba(255,255,255,.58);--gls2:rgba(255,255,255,.78);--glb:rgba(255,255,255,.75);--glsh:0 10px 30px rgba(32,33,36,.10),0 1px 3px rgba(32,33,36,.08);--gli:inset 0 1px 0 rgba(255,255,255,.95),inset 0 0 0 1px rgba(255,255,255,.28);--bf:blur(18px) saturate(1.7)}
+:root[data-theme=dark]{--gls:rgba(52,54,60,.52);--gls2:rgba(64,66,74,.66);--glb:rgba(255,255,255,.13);--glsh:0 10px 30px rgba(0,0,0,.45),0 1px 3px rgba(0,0,0,.4);--gli:inset 0 1px 0 rgba(255,255,255,.16),inset 0 0 0 1px rgba(255,255,255,.04)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(55vmax 45vmax at 6% -8%,rgba(66,133,244,.26),transparent 62%),radial-gradient(48vmax 42vmax at 100% 6%,rgba(251,188,5,.22),transparent 62%),radial-gradient(52vmax 46vmax at 72% 112%,rgba(234,67,53,.15),transparent 62%),radial-gradient(40vmax 36vmax at 0% 85%,rgba(52,168,83,.14),transparent 62%)}
+:root[data-theme=dark] body::before{background:radial-gradient(55vmax 45vmax at 6% -8%,rgba(66,133,244,.22),transparent 62%),radial-gradient(48vmax 42vmax at 100% 6%,rgba(251,188,5,.12),transparent 62%),radial-gradient(52vmax 46vmax at 72% 112%,rgba(234,67,53,.12),transparent 62%),radial-gradient(40vmax 36vmax at 0% 85%,rgba(52,168,83,.10),transparent 62%)}
+.top,.note,.tools,.card,.side,.res,.search input,.seg,.ib,.chip,select,.btn,.tabs{background-color:var(--gls);-webkit-backdrop-filter:var(--bf);backdrop-filter:var(--bf);border:1px solid var(--glb);box-shadow:var(--gli),var(--glsh)}
+.top{border-width:0 0 1px;border-radius:0;background-color:color-mix(in srgb,var(--card) 55%,transparent)}
+.tools{border-bottom:0}
+.note{border-left:4px solid var(--ac);background-color:color-mix(in srgb,var(--nbg) 60%,transparent);border-radius:14px}
+.card,.side,.res{border-radius:18px}
+.card h3,.side h3{background:rgba(32,33,36,.84)}
+.table{border-color:var(--glb);box-shadow:var(--glsh)}
+.seg,.chip,select,.btn,.ib{box-shadow:var(--gli),0 2px 8px rgba(32,33,36,.08)}
+.seg button{background:transparent}.seg button:hover{background:color-mix(in srgb,var(--card) 60%,transparent)}.seg button+button{border-left-color:var(--glb)}
+.btn:hover,.chip:hover,select:hover,.ib:hover{background-color:var(--gls2)}
+.chip.on{background-color:color-mix(in srgb,var(--ac) 30%,transparent);border-color:color-mix(in srgb,var(--ac) 70%,transparent)}
+.btn.pri{background-color:var(--ac);border-color:color-mix(in srgb,var(--ac) 70%,#fff);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 4px 14px color-mix(in srgb,var(--ac) 40%,transparent)}
+.search input:focus{background-color:var(--gls2);border-color:#1a73e8;box-shadow:0 0 0 2px rgba(26,115,232,.35),var(--gli)}
+.act{background:color-mix(in srgb,var(--card) 50%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.act .btn{background-color:var(--gls2)}
+.res[data-r]{border-color:var(--glb)}
+.tabs{background-color:var(--gls);box-shadow:var(--gli),var(--glsh)}
+.srv .lk{background:color-mix(in srgb,var(--bg) 60%,transparent);border-radius:10px}
+#toast{background:color-mix(in srgb,var(--toast) 80%,transparent);-webkit-backdrop-filter:var(--bf);backdrop-filter:var(--bf);border:1px solid var(--glb);border-radius:16px;box-shadow:var(--glsh)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){:root{--gls:rgba(255,255,255,.94);--gls2:#fff}:root[data-theme=dark]{--gls:rgba(40,42,46,.96);--gls2:#33353a}}
+/* unified shape */
+.table,.note,.card,.side,.res{border-radius:12px}.tools{border-radius:12px 12px 0 0}.tools+.table{border-radius:0 0 12px 12px;border-top:0}
+.btn,.chip,select,.search input,.ib,.seg{border-radius:999px}
+.logo{border-radius:12px}.sw{border-radius:4px}.li b{border-radius:8px}.li .x{border-radius:50%}.srv .lk{border-radius:12px}.act{border-radius:0}
+.row:last-child:not(.open){border-bottom:0}
+/* animations */
+@keyframes dockIn{from{opacity:0;transform:translateY(90px)}to{opacity:1;transform:none}}
+@keyframes rowIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes actIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@keyframes popIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
+@keyframes barPulse{0%,100%{opacity:.55}50%{opacity:1}}
+main.enter>*{animation:fadeUp .4s cubic-bezier(.2,.8,.3,1) both}
+main.enter .band{animation:fadeUp .4s cubic-bezier(.2,.8,.3,1) both}
+main.enter .row{animation:rowIn .4s cubic-bezier(.2,.8,.3,1) both;animation-delay:calc(var(--i,0)*18ms)}
+.row.open .act{animation:actIn .28s cubic-bezier(.2,.8,.3,1)}
+.row.open .act .btn{animation:popIn .34s cubic-bezier(.3,1.4,.5,1) both}
+.row.open .act>.btn:nth-child(2),.row.open .act .eq .btn:nth-child(1){animation-delay:.05s}
+.row.open .act .eq .btn:nth-child(2){animation-delay:.1s}
+.row[data-shiny]::after{animation:barPulse 3s ease-in-out infinite}
+.chev{transition:transform .25s cubic-bezier(.3,1.3,.5,1)}
+.btn,.chip{transition:background-color .15s,color .15s,transform .12s,box-shadow .2s}
+.btn:active,.chip:active{transform:scale(.96)}
+.btn:hover{box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.search input{transition:box-shadow .2s,background-color .2s}.search input:focus{box-shadow:0 0 0 2px var(--ac);background:var(--card)}
+.res{transition:background-color .35s,color .35s}
+body,.top,.card,.side{transition:background-color .3s,color .3s}
+.c.n{transition:padding-left .18s}
+@media(hover:hover) and (min-width:761px){.row[data-k]:hover .c.n{padding-left:20px}}
+#toast{transform:translate(-50%,12px);transition:opacity .22s,transform .3s cubic-bezier(.3,1.3,.5,1)}#toast[style*="opacity: 1"]{transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media(max-width:760px){
-:root{--tabh:48px}
-.top{padding-left:12px;padding-right:12px;gap:8px}
-.search{margin:0}.search input{height:44px}.search svg{top:12px}
-.ib{width:44px;height:44px}
-main{padding:8px 8px 0}
-.note{margin-bottom:8px}
-.tools{padding:4px;gap:2px}.tools.free{padding:8px}
-.chip,select,.btn{min-height:44px}.btn.ic{width:44px}
-.sp{display:none}.cnt{flex:1 0 100%;margin:0;padding:2px 8px 4px}
+:root{--tbt:56px}
+.top{padding-left:10px;padding-right:10px;gap:8px}
+.search{margin-left:0;min-width:0}
+main{padding:10px 10px 0}
+.note{margin:0 0 10px}
+.tools+.table{border-top:0}
+.chip,select,.btn{min-height:40px}.sp{display:none}
+.cnt{flex:1 0 100%;padding:6px 14px;border-top:1px solid var(--gl)}
 .head{display:none}
-.table{border-radius:0 0 8px 8px}
-.row{display:flex;flex-wrap:wrap;align-items:center;padding:8px 16px;gap:2px 12px;min-height:56px}
-.c{padding:0;border:0!important}
-.c.n{flex:1 1 0;min-width:0;font-size:14px;font-weight:500}
-.c.v{flex:none;margin-left:auto;font-size:14px;background:transparent;padding:0}
-.c.v.oc{max-width:42%;text-align:right;font-size:12px;background:transparent;padding:0}
-.c.i{order:3;flex:1 0 100%;font-size:12px;justify-content:flex-start}
-.c.r,.c.d,.c.t{order:4;flex:none;font-size:12px;color:var(--mu)}
-.lb{display:inline;margin-right:4px;font-size:12px;color:var(--mu)}
-.c.d .pill,.c.t .pill{background:transparent;padding:0;height:auto;min-width:0}
-.c.d .lb,.c.r .lb{margin-right:4px}
-.act{order:5;flex:1 0 100%;padding:6px 0 4px;border-top:0}.act .btn{flex:1}
-.band{min-height:44px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;padding:10px 14px 10px 18px;min-height:56px;border-bottom:1px solid var(--ln)}
+.c,.c:last-child{padding:0;border:0;filter:none!important}
+.c.n{flex:1 1 0;min-width:0;font-size:14px;background:none;color:var(--ink);padding:0}
+.c.v{flex:none;margin-left:auto;font-size:14px;padding:2px 8px;align-self:center}
+.c.v.oc{max-width:45%;text-align:right}
+.c.i{order:3;flex:1 0 100%;font-size:12px;background:none;color:var(--mu);font-weight:400}
+.c.d,.c.t{order:4;flex:none;align-items:center}
+.c.d .pill,.c.t .pill{flex:none;min-height:0;height:24px;min-width:44px;padding:0 10px;border:1px solid var(--ln)}
+.lb{display:inline;margin-right:8px;font:400 12px var(--tx);color:var(--mu)}
+.c.d{gap:0}
+.act{order:5;flex:1 0 100%;padding:8px 0 2px;border:0;justify-content:flex-start}.act .btn{flex:none}.act .eq{flex:1 0 100%;flex-direction:column}.act .eq .btn{flex:none}
 .two{grid-template-columns:1fr}
-.li{min-height:44px}.li .x{width:44px;height:44px}
-.srv .bt{flex-wrap:wrap}
-.tabs{padding-left:4px;padding-right:4px}.tabs button{min-width:44px}
-#toast{left:8px;right:8px;max-width:none}
+.tabs button{padding:0 11px}
+.res{margin:12px 0}
+#toast{left:12px;right:12px;transform:translateY(12px);max-width:none}#toast[style*="opacity: 1"]{transform:none}
 }
-@media(max-width:560px){.ttl{display:none}}
+@media(max-width:620px){.ttl{display:none}}
 </style></head><body>
-<div class="top"><div class="logo" aria-hidden="true">AA</div><div class="ttl">Anime Adventures<small>Value List</small></div><div class="search"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="q" placeholder="Поиск юнита…" autocomplete="off" aria-label="Поиск юнита"></div><button class="ib" id="th" aria-label="Сменить тему" title="Сменить тему"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button></div>
+<div class="top"><div class="logo" aria-hidden="true">AA</div><div class="ttl">Anime Adventures<small>Value List</small></div><div class="search"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="q" autocomplete="off"></div><div class="seg" id="lg" role="group"><button data-lang="en">EN</button><button data-lang="ru">RU</button></div><button class="ib" id="th"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button></div>
 <main id="m"></main>
-<div class="spons">Спонсировано <b>Kuzma Game</b></div>
-<nav class="tabs" id="tabs" aria-label="Разделы"></nav>
+<div class="spons" id="sp"></div>
+<nav class="tabs" id="tabs"></nav>
 <div id="toast" role="status" aria-live="polite"></div>
 <script>
-let TIERS=[
-["SS","Top S / SS","",`JIO (Over Heaven) / Dio (SHINY)|OC|-|4|Estimated <30 in game, rarest unit|o`],
-["S+","High S / S+","от 7000",`Future Guhon / Gohan (SHINY)|OC|-|5|<40 in game, Week 1 LB
-Future Guhon / Gohan|16000|950|6|<60 in game, Week 1 LB
-Jio (Over Heaven) / Dio|14500|850|5|Christmas Sec unit from Frozen Stars
-Blue Devil / Rin (SHINY)|12500|700|5|<60 in game, U3 LB
-Blue Devil / Rin|7500|450|6|<90 in game, U3 LB`],
-["S","Mid S / S","от 3000",`Mist Ninja / Zabuza (SHINY)|5850|375|7|<110 in game, U10 LB
-Roger / Gol D. Roger (SHINY)|5350|320|5|Summer Sec unit from Summer Stars|u
-Android 21 (SHINY)|5250|315|6|<110 in game, U9 LB
-Homuru / Homura (SHINY)|3900|240|8|U13.5 Sec Port unit
-Emili / Emilia (SHINY)|3600|210|5|IC Limited LB - S2
-Toby / Tobi (SHINY)|3300|180|3|IC Limited LB - S3
-Android 21|3175|175|7|<165 in game, U9 LB
-Skull Knight (SHINY)|3100|170|6|Berserk Sec Port unit
-Hie / Hiei (SHINY)|3000|165|5|<110 in game, U8 LB`],
-["S-","Low S / S-","от 1500",`Boron / Boros (SHINY)|2750|140|6|One Punch Man Sec Port unit
-Ging / Gin (SHINY)|2500|125|7|Karakora Part 2 Limited Ban unit|o
-Saicky / Saiki K (SHINY)|2500|125|3|<80 in game, U5 LB
-Jelly / Jellal (SHINY)|2000|100|5|U5.5 Sec Dungeon unit
-Lulu / Lelouch (SHINY)|2000|100|3|Sec Ban unit, low chance to obtain|u
-Gilgamesh (SHINY)|1850|90|5|Fate Sec Port unit
-Unohona / Unohana (SHINY)|1750|85|6|IC Limited LB - S5
-Kumo / Kuma (SHINY)|1650|80|3|<110 in game, U7 LB
-Mamy / Mamy (SHINY)|1550|75|7|U13.5 Limited Event Ban unit`],
-["A+","High A / A+","от 800",`Saiky / Saiki|1450|72|3|<120 in game, U5 LB
-Tango / Tengen (SHINY)|1425|71|3|IC Limited LB - S1
-Hie / Hiei|1400|70|3|<165 in game, U8 LB
-Power (SHINY)|1400|70|6|Chainsaw Man Devil Star unit
-Kumo / Kuma|1350|67|3|<165 in game, U7 LB
-Flamingo / Doflamingo (SHINY)|1350|67|5|OP Dressrosa Sec Port unit
-Piccoru / Piccolo (SHINY)|1300|65|7|U11.7.5 Frieza Invasion Sec unit
-Roger / Gol D. Roger|1300|65|5|Summer Sec unit from Summer Stars
-Kisoko / Kisuke (Bankai) (SHINY)|1200|60|5|U3 Limited Ban unit, Meta Support
-Ezra / Erza (Lightning) (SHINY)|1175|59|4|U5.5 Limited Ban unit
-Merlyn / Merlin (SHINY)|1100|55|4|7 Deadly Sins Sec Port unit
-Yamomoto / Yamamoto (SHINY)|1000|50|4|Karakora Part 2 Sec Dungeon unit
-Wavy / Nejire (SHINY)|975|49|3|U12 LB
-Ria / Rias (SHINY)|950|48|6|Highschool DxD Demon Academy Star unit
-Snake Princess / Boa (SHINY)|925|46|5|IC LB - S4
-Shisu / Shisui (SHINY)|900|45|6|U10.7.5 Storm Raid Sec unit
-Rayleigh (SHINY)|875|44|5|IC Limited LB - S6
-Kenshi / Kenshin (SHINY)|850|43|4|<110 in game, U15 LB
-Poseidon (SHINY)|800|40|4|Summer Sec Port unit
-Kimomaro / Kimimaro (SHINY)|800|40|3|<110 in game, U16 LB
-Temori / Temari (SHINY)|800|40|3|<110 in game, U14 LB
-Jozo / Jozu (SHINY)|800|40|3|<110 in game, U11 LB`],
-["A","Mid A / A","от 450",`Mist Ninja / Zabuza|725|36|4|<440 in game, U10 LB
-Harribu / Harribel (SHINY)|675|34|5|Summer Cap 2023 unit
-Angel (SHINY)|675|34|5|Chainsaw Man Devil Star unit
-Issai / Issei (SHINY)|635|32|5|U15 Anniversary Summon unit
-Bombietta / Bambietta (SHINY)|625|32|5|IC Limited LB - S9
-Luci / Lucy (SHINY)|625|32|5|U5 Limited Ban unit
-Homuru / Homura|600|30|7|U13.5 Sec Port unit
-Boxo (SHINY)|600|30|2|<110 in game, U17 LB
-Rohon / Rohan (SHINY)|600|30|5|U16.5.0 Bizarre Town Raid unit
-Daky / Daki (SHINY)|600|30|5|U12.5.0 Entertainment District Raid unit
-Ice Queen / Esdeath (SHINY)|575|29|4|Christmas Sec Frozen Port unit
-Getu / Geto (SHINY)|550|28|4|U6.5 Sec Dungeon unit
-Akena / Akeno (SHINY)|550|28|4|Highschool DxD Demon Academy Star unit
-Nejiri / Nejire|545|27|4|U12 LB
-Yoshina / Yoshino (SHINY)|500|25|5|Easter Egg 2023 unit
-Gowther / Gowthy (SHINY)|490|25|5|7 Deadly Sins Part 1 Limited Ban unit
-Heathcliff (SHINY)|475|24|5|U14 Limited Ban unit
-Inuyasha / Inuyashu (SHINY)|475|24|5|Top 1 LB for Tournament 5-8
-Ji Mo Ri / Jin Mori (SHINY)|470|24|4|Top 1 LB for Tournament 9-12
-Akin / Aki (SHINY)|460|23|4|Chainsaw Man Devil Star unit
-Tatsumo / Tatsumi (SHINY)|460|23|4|Top 1 LB for Tournament 1-4
-Madoko / Madoka (SHINY)|450|23|5|U13.5 Limited Event Ban unit
-Cooler (SHINY)|450|23|4|IC Limited LB - S10`],
-["A-","Low A / A-","от 300",`Chainsaw (SHINY)|430|22|3|Chainsaw Man Devil Star unit
-Peruna / Perona (SHINY)|425|20|4|Halloween 2022 Limited Cap unit
-Kenshi / Kenshin|415|21|3|<440 in game, U15 LB
-Kimomaro / Kimimaro|400|20|2|<440 in game, U16 LB
-Temori / Temari|400|20|2|<440 in game, U14 LB
-Isago / Isagi (SHINY)|390|20|3|Top 1 LB for Tournament
-Ipo / Ippo (SHINY)|385|19|3|Top 1 LB for Tournament 13-14
-Jozo / Jozu|385|19|2|<440 in game, U11 LB
-Buggy (SHINY)|380|19|3|Top 1 LB for Tournament 15
-Sayako / Sayaka (SHINY)|375|19|3|U13.5 Limited Event Ban unit
-Minata / Minato (SHINY)|375|19|3|IC Limited Cap - S8
-Kuneko / Koneko (SHINY)|375|19|3|Highschool DxD Demon Academy Star unit
-Broke / Brook (SHINY)|365|18|3|Halloween 2022 Limited Cap unit
-Roshy / Roshi (SHINY)|365|18|2|IC Limited Cap - S7
-Kyoka / Kyoko (SHINY)|350|18|3|U13.5 Limited Event Ban unit
-Kit / Kite (SHINY)|335|17|4|U4 Limited Ban unit
-Klay / Klein (SHINY)|335|17|3|U14 Limited Ban unit
-Todoro / Todoroki (SHINY)|325|16|4|Christmas Frozen Cap 2022 unit
-Weather / Weather Report (SHINY)|325|16|3|U10 Limited Ban unit
-Emili / Emilia|325|16|5|IC Limited LB - S2
-Avdo / Avdol (SHINY)|300|15|3|Summer Cap 2023 unit`],
-["B+","High B / B+","от 200",`Ezra / Erza Valkyrie (SHINY)|295|15|4|U5.5 Limited Ban unit
-Gilgamesh|280|14|5|Fate Sec Port unit
-Erza / Ezra (True Heart) (SHINY)|275|14|4|Christmas Frozen Cap 2022 unit
-Kizume / Kisame (SHINY)|275|14|3|Summer Cap 2023 unit
-Toshin / Toshiro (SHINY)|260|13|3|Christmas Frozen Cap 2022 unit
-Skull Knight|250|12|5|Berserk Sec Port unit
-Kent / Kento (SHINY)|250|12|4|U6 Limited Ban unit
-Boxo|250|12|2|<440 in game, U17 LB
-Kobeno / Kobeni (SHINY)|235|12|3|Chainsaw Man Devil Star unit
-Hime / Himeno (SHINY)|235|12|3|Chainsaw Man Devil Star unit
-Fire Fist / Ace (SHINY)|230|11|4|U1 Limited Cap unit
-Boros / Boron|225|11|4|One Punch Man Sec Port unit
-Doflamingo / Flamingo|215|11|4|OP Dressrosa Sec Port unit`],
-["B","Mid B / B","от 100",`Lucky / Luck (SHINY)|185|9|2|U7 Limited Ban unit
-Moriu / Moria (SHINY)|185|9|2|Halloween 2022 Limited Cap unit
-Lulu / Lelouch|185|9|2|Sec Ban unit, very low chance to obtain|u
-Yamomoto / Yamamoto (Hellfire)|175|9|3|Karakora Part 2 Sec Dungeon unit
-Inuyasha / Inuyashu|175|9|4|2nd + 3rd place reward for Tournament
-Ji Mo Ri / Jin Mori|175|8|3|2nd + 3rd place reward for Tournament
-Tatsumo / Tatsumi|175|9|4|2nd + 3rd place reward for Tournament
-Oshy / Ai Hoshino (SHINY)|170|8|5|Cake Hunt Pass Tier 50 unit
-Ipo / Ippo|160|8|3|2nd + 3rd place reward for Tournament
-Power|150|8|5|Chainsaw Man Devil Star unit
-Mira / Mirko (SHINY)|145|7|3|Easter Egg 2023 unit
-Denjy / Denji Secret (SHINY)|135|7|3|Chainsaw Man Sec Port unit
-Isago / Isagi|135|7|3|2nd + 3rd place reward for Tournament
-Carrot (SHINY)|135|7|3|Easter Egg 2023 unit
-Ichi (Full Hollow) / Ichigo (Full Hollow) (SHINY)|125|6|3|U3 Limited Cap unit
-Kisoko / Kisuke|120|6|4|U3 Limited Ban unit
-Buggy|120|6|3|2nd + 3rd place reward for Tournament
-Merlyn / Merlin|115|6|3|7 Deadly Sins Sec Port unit
-Haka / Haku (SHINY)|115|6|3|Christmas Frozen Cap 2022 unit
-Jellal / Jelly|110|5|3|U5.5 Limited Dungeon unit
-Poseidon|105|5|3|Summer Sec Port unit
-Rohan|100|5|4|U16.5.0 Bizarre Town Raid unit
-Renzi / Renji (SHINY)|100|5|2|U2 Limited Cap unit`],
-["B-","Low B / B-","от 50",`Nami / Navi (SHINY)|95|5|4|Cloud Pass Tier 25 Limited unit
-Ezra / Ezra (Lightning)|90|4|3|U5.5 Limited Ban unit
-Daky / Daki|80|4|4|U12.5.0 Entertainment District Raid unit
-Getu / Geto (Maximum)|75|4|4|U6.5 Limited Dungeon unit
-Ice Queen / Esdeath|70|3|3|Christmas Sec Frozen Port unit
-Veko (SHINY)|70|3|3|April Fools Sec unit
-Luci / Lucy (All Keys)|65|3|4|U5.5 Limited Ban unit
-Heathcliff|65|3|4|U14 Limited Ban unit
-Piccoru / Piccolo|65|3|3|U11.7.5 Frieza Invasion Sec unit
-Mamy / Mami|60|3|4|U13.5 Limited Event Ban unit
-Shisu / Shisui|60|3|3|U10.7.5 Storm Raid Sec unit
-Navi / Nami|60|3|4|Cloud Pass Tier 25 Limited unit
-Oshy / Ai Hoshino|60|3|3|Cake Hunt Pass Tier 50 unit
-Issai / Issei|60|3|3|U15 Anniversary Dungeon unit
-Angel|60|3|3|Chainsaw Man Devil Star unit
-Ria / Rias|55|3|3|Highschool DxD Demon Academy Star unit
-Brook / Broke|55|3|4|Halloween 2022 Limited Cap unit`],
-["C+","High C / C+","от 30",`Madoka / Madoko|50|-|3|U13.5 Limited Event Ban unit
-Akena / Akeno|50|-|3|Highschool DxD Demon Academy Star unit
-Gati / Geten (SHINY)|50|-|2|Christmas 2022 Limited Present unit
-Nightmare Luffo / Nightmare Luffy (SHINY)|50|-|2|Halloween 2022 Limited Event Quest unit
-Shingo / Shinji (SHINY)|50|-|2|U7.6 Limited Event Quest unit
-Mecha Freezo / Mecha Frieza (SHINY)|50|-|2|U5.6 Limited Code unit
-Chainsaw / Denji|50|-|2|Chainsaw Man Devil Star unit
-Aki / Akin|50|-|2|Chainsaw Man Devil Star unit
-Koneko / Kuneko|50|-|2|Highschool DxD Demon Academy Star unit
-Bombietta / Bambietta|45|-|3|IC Limited Cap - S9
-Sayako / Sayaka|45|-|3|U13.5 Limited Event Ban unit
-Harribel / Harribu|40|-|3|Summer Cap 2023 unit
-Peruna / Perona|40|-|2|Halloween 2022 Limited Cap unit
-Klay / Klein|40|-|2|U14 Limited Ban unit
-Ezra / Ezra (Valkyrie)|40|-|2|U5.5 Limited Ban unit
-Avdol / Avdo|35|-|2|Summer Cap 2023 unit
-Snake Princess / Boa|30|-|2|IC Limited Cap - S4
-Minata / Minato|30|-|2|IC Limited Cap - S8
-Rayleigh|30|-|2|IC Limited Cap - S6
-Tango / Tengen|30|-|2|IC Limited Cap - S1
-Unohona / Unohana|30|-|2|IC Limited Cap - S5`],
-["C","Mid C / C","от 15",`Kizume / Kisame|25|-|2|Summer Cap unit
-Kyoka / Kyoko|25|-|2|U13.5 Limited Event Ban unit
-Hime / Himeno|25|-|2|Chainsaw Man Devil Star unit
-Kobeno / Kobeni|25|-|2|Chainsaw Man Devil Star unit
-Gowthy / Gowther|25|-|2|7 Deadly Sins Part 1 Limited Ban unit
-Cooler|25|-|2|IC Limited Cap - S10
-Tobi / Toby|20|-|2|IC Limited Cap - S3
-Ezra / Ezra (True Heart)|20|-|2|U5.5 Limited Ban unit
-Roshy / Roshi|20|-|1|IC Limited Cap - S7
-Luci / Lucy (Missing Keys)|15|-|2|U5 Limited Ban unit
-Todorro / Todoroki|15|-|2|Christmas Frozen Cap 2022 unit
-Toshin / Toshiro|15|-|1|Christmas Frozen Cap 2022 unit
-Kent / Kento|15|-|2|U6 Limited Ban unit
-Heavy Weather / Weather Report|15|-|2|U10 Limited Ban unit`],
-["C-","Low C / C-","от 5",`Kit / Kite|10|-|2|U4 Limited Ban unit
-Lucky / Luck|10|-|2|U7 Limited Ban unit
-Veko|10|-|1|April Fools Sec unit
-Ging / Gin|10|-|1|Karakora Part 2 Limited Ban unit
-Moriu / Moria|10|-|1|Halloween 2022 Limited Cap unit
-Haka / Haku|10|-|1|Christmas Frozen Cap 2022 unit
-Fire Fist / Ace|5|-|1|U1 Limited Cap unit
-Ichi (Full Hollow) / Ichigo (Full Hollow)|5|-|1|U3 Limited Cap unit
-Renzi / Renji|5|-|1|U2 Limited Cap unit
-Luffo (Marine's Ford) / Luffy (Marineford)|5|-|1|U1 Limited Event Quest unit
-Nightmare Luffo / Nightmare Luffy|5|-|1|Halloween 2022 Limited Event Quest unit
-Shingo / Shinji|5|-|1|U7.6 Limited Event Quest unit
-Gati / Geten|5|-|1|Christmas 2022 Limited Present unit
-Mecha Freezo / Mecha Frieza|5|-|1|U5.6 Limited Code unit
-Yoshina / Yoshino|5|-|2|Easter Egg 2023 unit
-Carrot|5|-|1|Easter Egg 2023 unit
-Mira / Mirko|5|-|1|Easter Egg 2023 unit`]];
-let GP=[["Shiny Hunter",215,5,"3x more likely to pull a shiny unit (3%)"],["Skip 10 levels",200,5,"Skips 10 levels ahead in the Battle Pass"],["Battle Pass",180,5,"Battle pass restarts every few updates"],["Display All Units",110,4,"Display 6 units in the lobby around you"],["VIP",30,2,"20% off summons, rainbow nametag, 2x time machine rewards"],["Display 3 Units",20,2,"Display 3 units in the lobby around you"],["Unit Storage",10,2,"100 extra unit storage"]];
-let RL=[["Nail (High %)",345,4,"Chainsaw Man Update Relic"],["Nail (Low %)",185,3,"Chainsaw Man Update Relic"],["Black Blade Autumn Water",65,2,"Halloween Event 2022 Relic"],["Hellfire Blade",40,2,"Karakora Update Relic"]];
-let SK=[["Rainbow",[["Bulmy (Teen) / Bulma RAINBOW",12500,3,"Update 5.5 Limited Capsule Skin"],["Orwin (Headless) / Erwin RAINBOW",5000,3,"Halloween 2022 Limited Capsule Skin"],["Pito (Halloween) / Pito RAINBOW",2500,2,"Halloween 2022 Limited Capsule Skin"]]],["Обычные",[["Bulmy (Teen) / Bulma (Any Colour)",360,5,"Update 5.5 Limited Capsule Skin"],["Orwin (Delinquent) / Erwin (Any Colour)",135,4,"Update 5.5 Limited Capsule Skin"],["Orwin (Headless) / Erwin (Any Colour)",125,4,"Halloween 2022 Limited Capsule Skin"],["Goju (Vampire) / Gojo",35,2,"Halloween 2022 Limited Capsule Skin"],["Pito (Halloween) / Pito (Any Colour)",30,1,"Halloween 2022 Limited Capsule Skin"],["Guts (Slayer)",15,2,"Halloween 2023 Update Halloween Capsule Skin"],["Asto (Angel) / Asta",15,1,"Christmas 2022 Update Frozen Capsule Skin"],["Tangen / Tango (Festival)",10,1,"Summer 2023 Update Frozen Capsule Skin"],["Metal Knight / Metal Knight (Coco)",10,1,"Summer 2023 Update Summer Capsule Skin"]]]];
-let ST=[["DMG",450,26,"Damage stats classified as SSS"],["SPA",435,26,"SPA stats classified as SSS"],["RNG",300,20,"Range stats classified as SSS"]];
+let TIERS=[["SSS","Highest S / SSS","","Jio (Over Heaven) / Dio (SHINY)|OC|-|5|Estimated to be Less than 30 in Game, Rarest Unit in Game|o"],["SS","Top S / SS","25000+","Time Saviour / Gohan (SHINY)|OC|-|6|Less than 40 in Game, Week 1 Leaderboard Unit|s\nJio (Over Heaven) / Dio|38500|-|7.5|Christmas Update Secret Unit from Frozen Stars|s\nTime Saviour / Gohan|30000|-|6|Less than 60 in Game, Week 1 Leaderboard Unit|s\nBlue Flare / Rin (SHINY)|26750|-|5.5|Less than 60 in Game, Update 3 Leaderboard Unit|s"],["S+","High S / S+","12000+","Dracula / Alucard (SHINY)|24000|-|8|Halloween 2023 Update Secret Unit from Spooky Capsules|o\nBlue Flare / Rin|21500|-|6|Less than 90 in Game, Update 3 Leaderboard Unit|s\nShade Hunter / Zabuza (SHINY)|18250|-|5.5|Less than 110 in Game, Update 10 Leaderboard Unit|s\nArtificial AAA / A21 (SHINY)|17000|-|5.5|Less than 110 in Game, Update 9 Leaderboard Unit|s\nIllusionist / Aizen (SHINY)|16000|-|8.5|Christmas Secret Capsule/Banner Unit|o"],["S","Mid S / S","3000+","Shadowgirl / Homura (SHINY)|10750|-|7.5|Update 13.5 Secret Portal Unit|s\nArtificial AAA / A21|9750|-|6|Less than 165 in Game, Update 9 Leaderboard Unit|s\nPirate King / Gol D. Roger (SHINY)|6800|-|5.5|Summer Update Secret Unit from Summer Stars|s\nIce Lily / Emilia (SHINY)|6250|-|6|Infinity Castle Limited Leaderboard Unit - Season 2|s\nSkeleton Knight / Skull Knight (SHINY)|5650|-|7|Berserk Update Secret Portal Unit|s\nDemonshade / Hiei (SHINY)|4250|-|5|Less than 110 in Game, Update 8 Leaderboard Unit|s\nBlood / Power (SHINY)|3750|-|6.5|Chainsaw Man Update Devil Star Unit|s\nViking / Thorfinn (SHINY)|3500|-|6.5|Less than 110 in Game, Update 21 Leaderboard Unit|u\nToby / Tobi (SHINY)|3400|-|4|Infinity Castle Limited Leaderboard Unit - Season 3|s\nLord Alien King / Boros (SHINY)|3250|-|6|One Punch Man Update Secret Portal Unit|s"],["S-","Low S / S-","1500+","White Snake / Gin (SHINY)|2650|-|6|Karakora Part 2 Limited Banner Unit|s\nGolden King / Gilgamesh (SHINY)|2600|-|6.5|Fate Update Secret Portal Unit|s\nJoker / Shidou (SHINY)|2550|-|3|Less than 110 in Game, Update 20 Leaderboard Unit|s\nSaicky / Saiki K (SHINY)|2500|-|4|Less than 80 in Game, Update 5 Leaderboard Unit|s\nRiony / Rias (SHINY)|2450|-|6.5|Highschool DxD Demon Academy Star Unit|s\nJelly / Jellal (SHINY)|2200|-|5|Update 5.5 Secret Dungeon Unit|s\nBlood Queen / Unohana (SHINY)|2100|-|6|Infinity Castle Limited Leaderboard Unit - Season 5|s\nPhantom King / Lelouch (SHINY)|2000|-|5|Secret Banner Unit, Low chances to Obtain|s\nDracula / Alucard|1800|-|8|Halloween 2023 Update Secret Unit from Spooky Capsules|s\nIllusionist / Aizen|1700|-|9|Christmas Secret Capsule/Banner Unit|h\nMillie / Mamy (SHINY)|1625|-|5.5|Update 13.5 Limited Event Banner Unit|s\nKumo / Kuma (SHINY)|1550|-|3|Less than 110 in Game, Update 7 Leaderboard Unit|s\nLyla / Lucy (SHINY)|1550|-|5.5|Update 5 Limited Banner Unit|s"],["A+","High A / A+","800+","Green Alien / Piccolo (SHINY)|1450|-|6|Update 11.7.5 Frieza Invasion Secret Unit|s\nVengeful Swordman / Chihiro (SHINY)|1400|-|6.5|April Fools Update Secret Unit|u\nViking / Thorfinn|1325|-|6|Less than 440 in Game, Update 21 Leaderboard Unit|u\nEnlightened / Buddha (SHINY)|1225|-|5.5|Christmas Secret Portal Unit|s\nJoker / Shidou|1225|-|4|Less than 440 in Game, Update 20 Leaderboard Unit|s\nDemonshade / Hiei|1200|-|4|Less than 165 in Game, Update 8 Leaderboard Unit|s\nTango / Tengen (SHINY)|1125|-|3|Infinity Castle Capsule Unit - Update 1|s\nSaiky / Saiki K|1125|-|3.5|Less than 120 in Game, Update 5 Leaderboard Unit|s\nElize / Erza (Lightning) (SHINY)|1075|-|5.5|Update 5.5 Limited Banner Unit|s\nTrickster / Kisuke (Bankai) (SHINY)|1000|-|5|Update 3 Limited Banner Unit|s\nKumo / Kuma|975|-|3.5|Less than 165 in Game, Update 7 Leaderboard Unit|s\nStringy / Doflamingo (SHINY)|965|-|4|One Piece Dressrosa Update Secret Portal Unit|s\nInfinity Mage / Merlin (SHINY)|950|-|4.5|7 Deadly Sins Update Secret Portal Unit|s\nShizo / Shisui (SHINY)|950|-|5.5|Update 10.7.5 Storm Raid Secret Unit|s\nSnake Princess / Boa (SHINY)|925|-|5|Infinity Castle Capsule Unit - Season 4|s\nShadowgirl / Homura|900|-|8.5|Update 13.5 Secret Unit|s\nPirate King / Gol D. Roger|900|-|5|Summer Update Secret Unit From Summer Stars|s\nDark Mage / Judar (SHINY)|875|-|6.5|Christmas Secret Portal Unit|s\nSilver King / Rayleigh (SHINY)|875|-|5.5|Infinity Castle Limited Capsule Unit - Season 6|s\nUmbra / Cid (SHINY)|850|-|5.5|Halloween 2023 Update Secret Dungeon Unit|s\nKatana / Kenshin (SHINY)|800|-|4.5|Less than 110 in Game, Update 15 Leaderboard Unit|s"],["A","Mid A / A","450+","Fiery Commander / Yamamoto (SHINY)|780|-|4|Karakura Part 2 Update Secret Dungeon Unit|s\nKimomaro / Kimimaro (SHINY)|775|-|4|Less than 110 in Game, Update 16 Leaderboard Unit|s\nFan Ninja / Temari (SHINY)|775|-|3.5|Less than 110 in Game, Update 14 Leaderboard Unit|s\nSea God / Poseidon (SHINY)|750|-|5|Summer Update Secret Portal Unit|s\nInhuman / Dazai (SHINY)|700|-|5|Update 17.5 Secret Unit|s\nBomb Angel / Bambietta (SHINY)|675|-|6.5|Infinity Castle Capsule Unit - Season 9|s\nShade Hunter / Zabuza|670|-|5|Less than 440 in Game, Update 10 Leaderboard Unit|s\nParagon / Angel (SHINY)|665|-|5|Chainsawman Update Devil Star Unit|s\nAgony / Pain (SHINY)|650|-|4|Naruto Shippuden Update Secret Portal Unit|s\nJozo / Jozu (SHINY)|650|-|2.5|Less than 110 in Game, Update 11 Leaderboard Unit|s\nPuppet Girl / Yoshino (SHINY)|625|-|7|Easter Egg Update 2023 Unit|s\nDragon Knight / Issei (SHINY)|625|-|4.5|Update 15 Anniversary Summon Unit|s\nMangaka / Rohan (SHINY)|620|-|4|Update 16.5 Secret Unit|s\nMagic Girl / Madoka (SHINY)|600|-|6.5|Update 13.5 Limited Banner Unit|s\nBoxo / Boxo (SHINY)|600|-|2|Less than 110 in Game, Update 17 Leaderboard Unit|s\nGazu / Geto (SHINY)|600|-|5.5|Update 6.5 Secret Dungeon Unit|s\nChuuni / Chunibyo (SHINY)|575|-|6.5|April Fools Update Limited Banner Unit|h\nSwitchblade / Nagumo (SHINY)|575|-|4.5|Sakamoto Days Update Secret Portal Unit|u\nIce Queen / Esdeath (SHINY)|575|-|5|Christmas Update Secret Frozen Portal|s\nAkemy / Akeno (SHINY)|550|-|5.5|Highschool DxD Demon Academy Star Unit|s\nGhost Lady / Perona (SHINY)|525|-|5|Halloween 2022 Update Limited Capsule Unit|s\nSaka / Daki (SHINY)|525|-|3.5|Update 12.5.0 Secret Raid Unit|s\nDoll / Gowther (SHINY)|500|-|5|Seven Deadly Sins Part 1 Limited Banner Unit|s\nToad Sensei / Jiraiya (SHINY)|500|-|5|Update 18 Limited Banner Unit|s\nHammerhead / Harribel (SHINY)|490|-|3.5|Summer Update Summer Stars Unit|s\nDog Demon / Inuyashu (SHINY)|480|-|5|Top 1 Leaderboard Unit For Tournament 5-8|s\nCrusader / Heathcliff (SHINY)|475|-|5|Update 14 Limited Banner Unit|s\nTroy Flame / Roy Mustang (SHINY)|475|-|2.5|Update 21 Infinity Castle Leaderboard Unit|u\nCurse / Aki (SHINY)|470|-|5|Chainsaw Man Update Devil Star Unit|s\nWukong / Jin Mori (SHINY)|470|-|5|Top 1 Leaderboard Unit For Tournament 9-12|s\nTattermo / Tatsumi (SHINY)|460|-|4.5|Top 1 Leaderboard Unit For Tournament 1-4|s\nFridge / Cooler (SHINY)|450|-|3.5|Infinity Castle Capsule Unit - Season 10|s"],["A-","Low A / A-","300+","Violentine / Mitsukai (SHINY)|435|-|5.5|April Fools Update Limited Banner Unit|u\nBlade Beast / Denji (Mythic) (SHINY)|430|-|4.5|Chainsawman Update Devil Star Unit|s\nGravity Mage / Chuya (SHINY)|425|-|4.5|Update 17.5 Limited Banner Unit|s\nKatana / Kenshin|415|-|4|Less than 440 in Game, Update 15 Leaderboard Unit|s\nKimomaro / Kimimaro|400|-|2.5|Less than 440 in Game, Update 16 Leaderboard Unit|s\nFan Ninja / Temari|400|-|2.5|Less than 440 in Game, Update 14 Leaderboard Unit|s\nMessi / Isagi (SHINY)|385|-|4|Top 1 Leaderboard Unit For Tournament|s\nBoxer / Ippo (SHINY)|380|-|3.5|Top 1 Leaderboard Unit For Tournament 13-14|s\nScarlet Slayer / Kyōka Izumi (SHINY)|380|-|4|Update 17.5 Limited Banner Unit|s\nJozo / Jozu|380|-|2|Less than 440 in Game, Update 11 Leaderboard Unit|s\nSaki / Sayaka (SHINY)|375|-|5|Update 13.5 Limited Banner Unit|s\nFlash Ninja / Minato (SHINY)|375|-|4|Infinity Castle Capsule Unit - Season 8|s\nCatgirl / Koneko (SHINY)|375|-|5|Highschool DxD Demon Academy Star Unit|s\nSkeleton / Brook (SHINY)|370|-|5|Halloween Update 2022 Limited Capsule Unit|s\nDeath Ninja / Hidan (SHINY)|370|-|3|Halloween Update 2023 Spooky Stars Unit|s\nRobot Sorcerer / Mechamaru (SHINY)|360|-|3|Infinity Castle Limited Leaderboard Unit - Season 12|s\nWeather Girl / Weather Report (SHINY)|360|-|5|Update 10 Limited Banner Unit|s\nChance / Kite (SHINY)|350|-|5|Update 4 Limited Banner Unit|s\nLegendary Assassin / Sakamoto (SHINY)|350|-|4.5|Sakamoto Days Update Limited Banner Unit|u\nTurtle Master / Roshi (SHINY)|350|-|2.5|Infinity Castle Limited Capsule Unit - Season 7|s\nErza / Erza (Valkyrie) (SHINY)|345|-|5.5|Update 5.5 Limited Banner Unit|s\nKyko / Kyoko (SHINY)|345|-|4.5|Update 13.5 Limited Banner Unit|s\nSomber / Osaragi (SHINY)|340|-|4.5|Sakamoto Days Update Limited Banner Unit|u\nVengeful Swordman / Chihiro|330|-|6|April Fools Update Secret Unit|u\nTiger / Asushi (SHINY)|330|-|3|Update 17.5 Limited Banner Unit|s\nBlack Dog / Akutagawa (SHINY)|325|-|3|Update 17.5 Limited Banner Unit|s\nErza / Erza (True Heart) (SHINY)|320|-|5.5|Update 5.5 Limited Banner Unit|s\nStitches / Buggy (SHINY)|320|-|1.5|Top 1 Leaderboard Unit For Tournament 15|s\nIce lily / Emilia|315|-|5.5|Infinity Castle Capsule Unit - Season 2|s\nGolden King / Gilgamesh|310|-|5.5|Fate Update Secret Portal Unit|s\nKansai / Osaka (SHINY)|300|-|4.5|April Fools Update Limited Banner Unit|u"],["B+","High B / B+","200+","Virtual Samurai / Klein (SHINY)|280|-|3|Update 14 Limited Banner Unit|s\nRatio / Kento Nanami (SHINY)|275|-|5|Update 6 Limited Banner Unit|s\nSharkfin / Kisame (SHINY)|275|-|3|Summer Update Summer Stars Unit|s\nFiend Girl / Hinamy (SHINY)|275|-|3|Halloween Update 2023 Spooky Stars Unit|s\nFire First / Ace (SHINY)|270|-|5|Update 1 Limited Capsule Unit|s\nIdol / Ai Hoshino (SHINY)|270|-|5.5|Cake Hunt Battlepass Tier 50|s\nKillstreak / Gaku (SHINY)|265|-|4|Sakamoto Days Update Limited Banner Unit|u\nElf Mage / Frieren (SHINY)|265|-|3|Christmas Frozen Capsule/Banner Unit|s\nEnligthened / Buddha|260|-|5.5|Christmas Secret Portal Unit|s\nToshin / Toshiro (SHINY)|260|-|4|Christmas Frozen Stars Limited Capsule Unit|s\nSkeleton Knight / Skull Knight|260|-|5|Berserk Secret Portal Unit|s\nFlamefeather / Avdol (SHINY)|250|-|3|Summer Update Summer Stars Unit|s\nGas / Gas (SHINY)|250|-|3|Halloween Update 2023 Spooky Stars Unit|s\nKobeno / Kobeni (SHINY)|245|-|5|Chainsawman Update Devil Stars Unit|s\nHime / Himeno (SHINY)|245|-|4.5|Chainsawman Update Devil Stars Unit|s\nBoxo / Boxo|235|-|1|Less than 440 in Game, Update 17 Leaderboard Unit|s\nDark Mage / Judar|225|-|5.5|Christmas Secret Portal Unit|s\nSiren / Monet (SHINY)|225|-|2.5|Christmas Frozen Capsule/Banner Unit|s\nBlood / Power|220|-|5|Chainsawman Update Devil Stars Unit|s\nChuuni / Chunibyo|200|-|6|April Fools Update Limited Banner Unit|h"],["B","Mid B / B","100+","Lulu / Lelouch|190|-|4|Secret Unit, Very Low Chances To Obtain|s\nCream / Vanilla Ice (SHINY)|190|-|2.5|Christmas Frozen Capsule/Banner Unit|s\nLucky / Luck (SHINY)|185|-|4|Update 7 Limited Banner Unit|s\nMorbid / Moria (SHINY)|185|-|2.5|Halloween 2022 Update Limited Capsule Unit|s\nDog Demon / Inuyasha|175|-|3.5|2nd + 3rd Reward For Tournament|s\nWukong / Jin Mori|175|-|3.5|2nd + 3rd Reward For Tournament|s\nUmbra / Cid|170|-|4.5|Halloween Update 2023 Dungeon Secret Unit|s\nSwitchblade / Nagumo|165|-|4|Sakamoto Days Update Secret Portal Unit|s\nTattermo / Tatsumi|160|-|3|2nd + 3rd Reward For Tournament|s\nBladebeast / Denji (Secret) (SHINY)|155|-|4|Chainsawman Update Secret Dungeon Unit|s\nMira / Mirko (SHINY)|150|-|3.5|Easter Egg Hunt 2023 Capsule Unit|s\nFiery Commander / Yamamoto (Hellfire)|150|-|3|Karakora Part 2 Dungeon Secret Unit|s\nLord Alien King / Boron|150|-|3|One Punch Man Update Secret Portal Unit|s\nBoxer / Ippo|150|-|3|2nd + 3rd Reward For Tournament|s\nStringy / Doflamingo|145|-|3|Dressrosa Update Secret Portal Unit|s\nErza / Erza (Lightning)|135|-|3|Update 5.5 Limited Banner Unit|s\nMessi / Isagi|135|-|3|2nd + 3rd Reward For Tournament|s\nCarrot (SHINY)|135|-|3.5|Easter Egg Hunt 2023 Capsule Unit|s\nIchi (Full Hollow) / Ichigo (Full Hollow) (SHINY)|125|-|4|Update 3 Limited Banner Unit|s\nTrickster / Kisuke|120|-|3.5|Update 3 Limited Banner Unit|s\nMirror Ninja / Haku (SHINY)|115|-|4|Christmas Frozen 2022 Update Limited Capsule Unit|s\nSea God / Poseidon|115|-|3|Summer Update Summer Secret Portal Unit|s\nWeather Girl / Nami (SHINY)|110|-|4|Cake Hunt Battlepass Tier 25|s\nJellal / Jelly|110|-|3|Update 5.5 Dungeon Unit|s\nVeko (SHINY)|110|-|5|April Fools 2023 Rare Fusion Secret Unit|s\nInfinity Mage / Merlin|105|-|3|7 Deadly Sins Update Secret Portal Unit|s\nAgony / Pain|100|-|3|Naruto Shippuden Update Secret Portal Unit|s\nToad Sensei / Jiraiya|100|-|4|Update 18 Limited Banner Unit|s\nRenzi / Renji (SHINY)|100|-|4|Update 2 Limited Capsule Unit|s"],["B-","Low B / B-","50+","Inhuman / Dazai|90|-|3|Update 17.5 Secret Portal Unit|s\nIdol / Ai Hoshino|85|-|5.5|Cake Hunt Battlepass Tier 50|s\nMangaka / Rohan|80|-|3|Update 16 Raid Secret Unit|s\nSaka / Daki|80|-|3|Update 12.5 Raid Secret Unit|s\nViolentine / Mitsukai|80|-|4.5|April Fools Update Limited Banner Unit|s\nGazu / Geto (Maximum)|75|-|4|Update 6.5 Secret Dungeon Unit|s\nIce Queen / Esdeath|70|-|3.5|Christmas Frozen Capsule Stars Secret Unit|s\nLegendary Assassin / Sakamoto|70|-|3|Sakamoto Days Update Limited Banner Unit|s\nLyla / Lucy (All Keys)|70|-|4|Update 5.5 Limited Banner Unit|s\nSomber / Osaragi|65|-|3|Sakamoto Days Update Limited Banner Unit|s\nWeather Girl / Nami|65|-|4|Cake Hunt Battlepass Tier 25|s\nCrusader / Heathcliff|65|-|2.5|Update 14 Limited Banner Unit|s\nGreen Alien / Piccolo|65|-|3|Update 11.7.5 Frieza Invasion Secret Unit|s\nRobot Sorcerer|65|-|3|Infinity Castle Limited Leaderboard Unit - Season 12|s\nMillie / Mami|60|-|2.5|Update 13.5 Limited Banner Unit|s\nShizo / Shisui|60|-|2.5|Update 10.7.5 Storm Raid Secret Unit|s\nDragon Knight / Issei|60|-|2.5|Update 15 Anniversary Summon Unit|s\nParagon / Angel|60|-|2.5|Chainsawman Update Devil Stars Unit|s\nStitches / Buggy|60|-|1|2nd + 3rd Reward For Tournament|s\nRiony / Rias|55|-|3|Highschool DxD Demon Academy Star Unit|s\nSkeleton / Brook|55|-|3|Halloween Update 2022 Limited Capsule Unit|s"],["C+","High C / C+","30+","Magic Girl / Madoka|50|-|3|Update 13.5 Limited Banner Unit|s\nGravity Mage / Chuyo|50|-|2.5|Update 17.5 Limited Banner Unit|s\nAkemy / Akeno|50|-|3|Highschool DxD Demon Academy Star Unit|s\nShingo / Shinji (SHINY)|50|-|2.5|Update 7.6 Limited Event Quest Unit|s\nMecha Freezo / Mecha Frieza (SHINY)|50|-|2.5|Update 5.6 Limited Code Unit|s\nBlade Beast / Denji (Mythic)|50|-|2|Chainsawman Update Secret Dungeon Unit|s\nCurse / Aki|50|-|2|Chainsawman Update Devil Star Unit|s\nCatgirl / Koneko|50|-|2.5|Highschool DxD Demon Academy Star Unit|s\nDeath Ninja / Hidan|45|-|2.5|Halloween Update 2023 Spooky Stars Unit|s\nBombietta / Bambietta|45|-|3|Infinity Castle Capsule Unit - Season 9|s\nTroy Flame / Roy Mustang|45|-|2.5|Update 21 Infinity Castle Leaderboard Unit|s\nSaki / Sayaka|45|-|2.5|Update 13.5 Limited Banner Unit|s\nHammerhead / Harribel|45|-|2.5|Summer Update Summer Star Capsule Unit|s\nFiend Girl / Hinamy|40|-|2.5|Halloween Update 2023 Spooky Stars Unit|s\nScarlet Slayer / Kyōka Izumi|40|-|2.5|Update 17.5 Limited Banner Unit|s\nTiger / Asushi|40|-|2|Update 17.5 Limited Banner Unit|s\nSiren / Monet|40|-|2.5|Christmas Frozen Capsule/Banner Unit|s\nGhost Lady / Perona|40|-|2|Halloween 2022 Update Limited Capsule Unit|s\nVirtual Samurai / Klein|40|-|2|Update 14 Limited Banner Unit|s\nErza / Erza (Valkyrie)|35|-|2|Update 5.5 Limited Banner Unit|s\nKansai / Osaka|35|-|2.5|April Fools Update Limited Banner Unit|s\nGas / Gas|35|-|2|Halloween Update 2023 Limited Capsule Unit|s\nKillstreak / Gaku|35|-|2|Sakamoto Days Update Limited Banner Unit|s\nFlamefeather / Avdol|35|-|2|Summer Update Summer Star Capsule Unit|s\nSnake Princess / Boa|30|-|2|Infinity Castle Capsule Unit - Season 4|s\nElf Mage / Frieren|30|-|2.5|Christmas Frozen Capsule/Banner Unit|s\nFlash Ninja / Minato|30|-|1.5|Infinity Castle Capsule Unit - Season 8|s\nSilver King / Rayleigh|30|-|1.5|Infinity Castle Limited Capsule Unit - Season 6|s\nTango / Tengen|30|-|1.5|Infinity Castle Capsule Unit - Update 1|s\nBlack Dog / Akutagawa|30|-|1.5|Update 17.5 Limited Banner Unit|s\nBlood Queen / Unohana|30|-|2|Infinity Castle Limited Leaderboard Unit - Season 5|s"],["C","Mid C / C","15+","Sharkfin / Kisame|25|-|1|Summer Update Summer Star Capsule Unit|s\nKyko / Kyoko|25|-|1.5|Update 13.5 Limited Banner Unit|s\nHime / Himeno|25|-|1.5|Chainsawman Update Devil Star Unit|s\nKobeno / Kobeni|25|-|2|Chainsawman Update Devil Star Unit|s\nDoll / Gowther|25|-|1.5|7 Deadly Sins Update Limited Banner Unit|s\nFridge / Cooler|25|-|1.5|Infinity Castle Capsule Unit - Season 10|s\nTobi / Toby|20|-|2|Infinity Castle Limited Leaderboard Unit - Season 3|s\nErza / Erza (True Heart)|20|-|1.5|Update 5.5 Limited Banner Unit|s\nTurtle / Roshi|20|-|1.5|Infinity Castle Limited Capsule Unit - Season 7|s\nCream / Vanilla Ice|20|-|1.5|Christmas Frozen Capsule/Banner Unit|s\nLily / Lucy (Missing Keys)|15|-|1|Update 5.5 Limited Banner Unit|s\nToshin / Toshiro|15|-|1|Christmas Frozen Capsule Unit|s\nRatio / Kento Nanami|15|-|2|Update 6 Limited Banner Unit|s\nHeavy Weather / Weather Report|15|-|2|Update 10 Limited Banner Unit|s"],["C-","Low C / C-","5+","Kit / Kite|10|-|2|Update 4 Limited Banner Unit|s\nLucky / Luck|10|-|1.5|Update 7 Limited Banner Unit|s\nVeko|10|-|2|April Fools Secret Unit|s\nWhite Snake / Gin|10|-|1|Karakora Part 2 Limited Banner Unit|s\nMorbid / Moria|10|-|1|Halloween 2022 Update Limited Capsule Unit|s\nFire First / Ace|10|-|1|Update 1 Limited Capsule Unit|s\nIchi (Full Hollow) / Ichigo (Full Hollow)|5|-|1|Update 3 Limited Capsule Unit|s\nRenzi / Renji|5|-|1|Update 2 Limited Capsule Unit|s\nLuffo (Marine's Ford) / Luffy (Marineford)|5|-|1|Update 1 Limited Event Quest Unit|s\nShingo / Shinji|5|-|1|Update 7.6 Limited Event Quest Unit|s\nMecha Freezo / Mecha Frieza|5|-|1|Update 5.6 Limited Code Unit|s\nPuppet Girl / Yoshino|5|-|1.5|Easter Egg Hunt 2023 Capsule Unit|s\nCarrot|5|-|1|Easter Egg Hunt 2023 Capsule Unit|s\nMira / Mirko|5|-|1|Easter Egg Hunt 2023 Capsule Unit|s"]];
+let GP=[["Grand Return Bundle",3500,7.5,"500 Rerolls/50,000 Summer Pearls/50,000 Gems/25x Perfect Stat Cubes"],["Summer Bundle 3",1875,6.5,"150 Rerolls/100,000 Summer Pearls/40x Sunny Stars"],["Summer Bundle 2",1400,6,"75 Rerolls/60,000 Summer Pearls/20x Sunny Stars"],["Summer Bundle 1",1000,6,"50 Rerolls/30,000 Summer Pearls/10x Sunny Stars"],["Shiny Hunter",280,5,"3x more likely to pull a shiny unit (3%)"],["Battle Pass",280,5,"Battle pass restarts every few updates"],["Assassin's Bundle",280,4,"10 Rerolls/1,000 Assassin's Tokens/10 Star Fruit Capsule/10x Stat Cubes/10x Cursed Tokens"],["Starter Bundle",260,4,"10 Rerolls/10,000 Gems/30 Star Fruit Capsule/1x Mythic Unit (Honey)"],["Skip 10 levels",240,4,"Skips 10 levels ahead in the Battle Pass"],["Display All Units",130,3,"Display 6 units in the lobby around you"],["VIP",50,2,"20% off summons, rainbow nametag, 2x time machine rewards"],["Display 3 Units",25,2,"Display 3 units in the lobby around you"],["Unit Storage",20,2,"100 extra unit storage"]];
+let RL=[["Nail (High %)",410,5.5,"Chainsaw Man Update Relic"],["Nail (Low %)",280,5,"Chainsaw Man Update Relic"],["Black Blade Autumn Water",65,2,"Halloween Event 2022 Relic"],["Hellfire Blade",45,1,"Karakora Update Relic"]];
+let SK=[["Rainbow",[["Bulmy (Teen) / Bulma RAINBOW",16000,2.5,"Update 5.5 Limited Capsule Skin"],["Orwin (Headless) / Erwin RAINBOW",9600,3,"Halloween 2022 Limited Capsule Skin"],["Pito (Halloween) / Pito RAINBOW",5300,2,"Halloween 2022 Limited Capsule Skin"]]],["Обычные",[["Bulmy (Teen) / Bulma (Any Colour)",740,6,"Update 5.5 Limited Capsule Skin"],["Orwin (Delinquent) / Erwin (Any Colour)",650,5.5,"Update 5.5 Limited Capsule Skin"],["Orwin (Headless) / Erwin (Any Colour)",550,5.5,"Halloween 2022 Limited Capsule Skin"],["Goju (Vampire) / Gojo",110,3,"Halloween 2022 Limited Capsule Skin"],["Pito (Halloween) / Pito (Any Colour)",55,2,"Halloween 2022 Limited Capsule Skin"],["Guts (Slayer) / Guts",10,2,"Halloween 2023 Update Limited Capsule Skin"],["Menace (Jetstream) / Stain",5,2,"Christmas 2024 Update Frozen Capsule Skin"],["Asto (Angel) / Asta",1,1,"Christmas 2022 Update Frozen Capsule Skin"],["Tangen / Tango (Festival)",1,1,"Summer 2023 Update Summer Capsule Skin"],["Metal Knight / Metal Knight (Coco)",1,1,"Summer 2023 Update Summer Capsule Skin"],["Most Other Skins",0,0,"Basically Any Event Skin"]]]];
+let ST=[["DMG (SSS)",475,7.5,"Damage stats classified as SSS"],["SPA (SSS)",425,6.5,"SPA stats classified as SSS"],["RNG (SSS)",375,6,"Range stats classified as SSS"],["DMG (SS)",110,3,"Damage stats classified as SS"],["SPA (SS)",90,2,"SPA stats classified as SS"],["RNG (SS)",60,2,"Range stats classified as SS"],["Any (S+ to S-)",20,1,"ANY stats classified from S+ to S-"],["Any (Under S-)",0,0,"ANY stats classified lower than S-"]];
 
-const UNIT_COLORS={
-"JIO (Over Heaven) / Dio (SHINY)":"#f2c200",
-"Future Guhon / Gohan (SHINY)":"#7e57c2",
-"Future Guhon / Gohan":"#7e57c2",
-"Jio (Over Heaven) / Dio":"#f2c200",
-"Blue Devil / Rin (SHINY)":"#1e88ff",
-"Blue Devil / Rin":"#1e88ff",
-"Mist Ninja / Zabuza (SHINY)":"#78909c",
-"Roger / Gol D. Roger (SHINY)":"#9b1c1c",
-"Android 21 (SHINY)":"#f06292",
-"Homuru / Homura (SHINY)":"#7e3fa8",
-"Emili / Emilia (SHINY)":"#b39ddb",
-"Toby / Tobi (SHINY)":"#ef6c00",
-"Android 21":"#f06292",
-"Skull Knight (SHINY)":"#a0aec0",
-"Hie / Hiei (SHINY)":"#c62828",
-"Boron / Boros (SHINY)":"#9c27b0",
-"Ging / Gin (SHINY)":"#b0bec5",
-"Saicky / Saiki K (SHINY)":"#f48fb1",
-"Jelly / Jellal (SHINY)":"#1e88e5",
-"Lulu / Lelouch (SHINY)":"#6a1b9a",
-"Gilgamesh (SHINY)":"#ffc107",
-"Unohona / Unohana (SHINY)":"#607d8b",
-"Kumo / Kuma (SHINY)":"#795548",
-"Mamy / Mamy (SHINY)":"#fbc02d",
-"Saiky / Saiki":"#f48fb1",
-"Tango / Tengen (SHINY)":"#d4af37",
-"Hie / Hiei":"#c62828",
-"Power (SHINY)":"#e53935",
-"Kumo / Kuma":"#795548",
-"Flamingo / Doflamingo (SHINY)":"#f06292",
-"Piccoru / Piccolo (SHINY)":"#43a047",
-"Roger / Gol D. Roger":"#9b1c1c",
-"Kisoko / Kisuke (Bankai) (SHINY)":"#7cb342",
-"Ezra / Erza (Lightning) (SHINY)":"#d32f2f",
-"Merlyn / Merlin (SHINY)":"#7e57c2",
-"Yamomoto / Yamamoto (SHINY)":"#e65100",
-"Wavy / Nejire (SHINY)":"#4fc3f7",
-"Ria / Rias (SHINY)":"#c62828",
-"Snake Princess / Boa (SHINY)":"#d81b60",
-"Shisu / Shisui (SHINY)":"#b71c1c",
-"Rayleigh (SHINY)":"#90a4ae",
-"Kenshi / Kenshin (SHINY)":"#c0392b",
-"Poseidon (SHINY)":"#00acc1",
-"Kimomaro / Kimimaro (SHINY)":"#b0bec5",
-"Temori / Temari (SHINY)":"#f2c94c",
-"Jozo / Jozu (SHINY)":"#90caf9",
-"Mist Ninja / Zabuza":"#78909c",
-"Harribu / Harribel (SHINY)":"#26a69a",
-"Angel (SHINY)":"#ffd54f",
-"Issai / Issei (SHINY)":"#d32f2f",
-"Bombietta / Bambietta (SHINY)":"#f8a5c2",
-"Luci / Lucy (SHINY)":"#ffca28",
-"Homuru / Homura":"#7e3fa8",
-"Boxo (SHINY)":"#d32f2f",
-"Rohon / Rohan (SHINY)":"#558b2f",
-"Daky / Daki (SHINY)":"#e91e63",
-"Ice Queen / Esdeath (SHINY)":"#81d4fa",
-"Getu / Geto (SHINY)":"#5d4a8a",
-"Akena / Akeno (SHINY)":"#ffd600",
-"Nejiri / Nejire":"#4fc3f7",
-"Yoshina / Yoshino (SHINY)":"#80deea",
-"Gowther / Gowthy (SHINY)":"#f48fb1",
-"Heathcliff (SHINY)":"#5d4037",
-"Inuyasha / Inuyashu (SHINY)":"#e53935",
-"Ji Mo Ri / Jin Mori (SHINY)":"#ffb300",
-"Akin / Aki (SHINY)":"#ef6c00",
-"Tatsumo / Tatsumi (SHINY)":"#388e3c",
-"Madoko / Madoka (SHINY)":"#f06292",
-"Cooler (SHINY)":"#8e44ad",
-"Chainsaw (SHINY)":"#ff6d00",
-"Peruna / Perona (SHINY)":"#f06292",
-"Kenshi / Kenshin":"#c0392b",
-"Kimomaro / Kimimaro":"#b0bec5",
-"Temori / Temari":"#f2c94c",
-"Isago / Isagi (SHINY)":"#1565c0",
-"Ipo / Ippo (SHINY)":"#d32f2f",
-"Jozo / Jozu":"#90caf9",
-"Buggy (SHINY)":"#1e88e5",
-"Sayako / Sayaka (SHINY)":"#2196f3",
-"Minata / Minato (SHINY)":"#fdd835",
-"Kuneko / Koneko (SHINY)":"#eceff1",
-"Broke / Brook (SHINY)":"#607d8b",
-"Roshy / Roshi (SHINY)":"#fb8c00",
-"Kyoka / Kyoko (SHINY)":"#e53935",
-"Kit / Kite (SHINY)":"#6d4c41",
-"Klay / Klein (SHINY)":"#5c6bc0",
-"Todoro / Todoroki (SHINY)":"#ff5722",
-"Weather / Weather Report (SHINY)":"#00897b",
-"Emili / Emilia":"#b39ddb",
-"Avdo / Avdol (SHINY)":"#f4511e",
-"Ezra / Erza Valkyrie (SHINY)":"#d32f2f",
-"Gilgamesh":"#ffc107",
-"Erza / Ezra (True Heart) (SHINY)":"#d32f2f",
-"Kizume / Kisame (SHINY)":"#2f80c9",
-"Toshin / Toshiro (SHINY)":"#4dd0e1",
-"Skull Knight":"#a0aec0",
-"Kent / Kento (SHINY)":"#d9b02b",
-"Boxo":"#d32f2f",
-"Kobeno / Kobeni (SHINY)":"#78909c",
-"Hime / Himeno (SHINY)":"#f48fb1",
-"Fire Fist / Ace (SHINY)":"#ff6d00",
-"Boros / Boron":"#9c27b0",
-"Doflamingo / Flamingo":"#f06292",
-"Lucky / Luck (SHINY)":"#ffd54f",
-"Moriu / Moria (SHINY)":"#6a4c93",
-"Lulu / Lelouch":"#6a1b9a",
-"Yamomoto / Yamamoto (Hellfire)":"#e65100",
-"Inuyasha / Inuyashu":"#e53935",
-"Ji Mo Ri / Jin Mori":"#ffb300",
-"Tatsumo / Tatsumi":"#388e3c",
-"Oshy / Ai Hoshino (SHINY)":"#ba68c8",
-"Ipo / Ippo":"#d32f2f",
-"Power":"#e53935",
-"Mira / Mirko (SHINY)":"#eceff1",
-"Denjy / Denji Secret (SHINY)":"#ff6d00",
-"Isago / Isagi":"#1565c0",
-"Carrot (SHINY)":"#fb8c00",
-"Ichi (Full Hollow) / Ichigo (Full Hollow) (SHINY)":"#fb6a00",
-"Kisoko / Kisuke":"#7cb342",
-"Buggy":"#1e88e5",
-"Merlyn / Merlin":"#7e57c2",
-"Haka / Haku (SHINY)":"#b3e5fc",
-"Jellal / Jelly":"#1e88e5",
-"Poseidon":"#00acc1",
-"Rohan":"#558b2f",
-"Renzi / Renji (SHINY)":"#e53935",
-"Nami / Navi (SHINY)":"#ff9800",
-"Ezra / Ezra (Lightning)":"#d32f2f",
-"Daky / Daki":"#e91e63",
-"Getu / Geto (Maximum)":"#5d4a8a",
-"Ice Queen / Esdeath":"#81d4fa",
-"Veko (SHINY)":"#2979ff",
-"Luci / Lucy (All Keys)":"#ffca28",
-"Heathcliff":"#5d4037",
-"Piccoru / Piccolo":"#43a047",
-"Mamy / Mami":"#fbc02d",
-"Shisu / Shisui":"#b71c1c",
-"Navi / Nami":"#ff9800",
-"Oshy / Ai Hoshino":"#ba68c8",
-"Issai / Issei":"#d32f2f",
-"Angel":"#ffd54f",
-"Ria / Rias":"#c62828",
-"Brook / Broke":"#607d8b",
-"Madoka / Madoko":"#f06292",
-"Akena / Akeno":"#ffd600",
-"Gati / Geten (SHINY)":"#d32f2f",
-"Nightmare Luffo / Nightmare Luffy (SHINY)":"#e53935",
-"Shingo / Shinji (SHINY)":"#7b1fa2",
-"Mecha Freezo / Mecha Frieza (SHINY)":"#8e24aa",
-"Chainsaw / Denji":"#ff6d00",
-"Aki / Akin":"#ef6c00",
-"Koneko / Kuneko":"#eceff1",
-"Bombietta / Bambietta":"#f8a5c2",
-"Sayako / Sayaka":"#2196f3",
-"Harribel / Harribu":"#26a69a",
-"Peruna / Perona":"#f06292",
-"Klay / Klein":"#5c6bc0",
-"Ezra / Ezra (Valkyrie)":"#d32f2f",
-"Avdol / Avdo":"#f4511e",
-"Snake Princess / Boa":"#d81b60",
-"Minata / Minato":"#fdd835",
-"Rayleigh":"#90a4ae",
-"Tango / Tengen":"#d4af37",
-"Unohona / Unohana":"#607d8b",
-"Kizume / Kisame":"#2f80c9",
-"Kyoka / Kyoko":"#e53935",
-"Hime / Himeno":"#f48fb1",
-"Kobeno / Kobeni":"#78909c",
-"Gowthy / Gowther":"#f48fb1",
-"Cooler":"#8e44ad",
-"Tobi / Toby":"#ef6c00",
-"Ezra / Ezra (True Heart)":"#d32f2f",
-"Roshy / Roshi":"#fb8c00",
-"Luci / Lucy (Missing Keys)":"#ffca28",
-"Todorro / Todoroki":"#ff5722",
-"Toshin / Toshiro":"#4dd0e1",
-"Kent / Kento":"#d9b02b",
-"Heavy Weather / Weather Report":"#00897b",
-"Kit / Kite":"#6d4c41",
-"Lucky / Luck":"#ffd54f",
-"Veko":"#2979ff",
-"Ging / Gin":"#b0bec5",
-"Moriu / Moria":"#6a4c93",
-"Haka / Haku":"#b3e5fc",
-"Fire Fist / Ace":"#ff6d00",
-"Ichi (Full Hollow) / Ichigo (Full Hollow)":"#fb6a00",
-"Renzi / Renji":"#e53935",
-"Luffo (Marine's Ford) / Luffy (Marineford)":"#e53935",
-"Nightmare Luffo / Nightmare Luffy":"#e53935",
-"Shingo / Shinji":"#7b1fa2",
-"Gati / Geten":"#d32f2f",
-"Mecha Freezo / Mecha Frieza":"#8e24aa",
-"Yoshina / Yoshino":"#80deea",
-"Carrot":"#fb8c00",
-"Mira / Mirko":"#eceff1"
-};
-const CR=[["Over Heaven", "#f2c200"], ["Future Guhon", "#7e57c2"], ["Blue Devil", "#1e88ff"], ["Zabuza", "#78909c"], ["Roger", "#9b1c1c"], ["Android 21", "#f06292"], ["Homuru", "#7e3fa8"], ["Emili", "#b39ddb"], ["Toby|Tobi", "#ef6c00"], ["Skull Knight", "#a0aec0"], ["Hie / Hiei", "#c62828"], ["Boron|Boros", "#9c27b0"], ["Ging", "#b0bec5"], ["Saicky|Saiky", "#f48fb1"], ["Jelly|Jellal", "#1e88e5"], ["Lulu", "#6a1b9a"], ["Gilgamesh", "#ffc107"], ["Unohona|Unohana", "#607d8b"], ["Kumo", "#795548"], ["Mamy", "#fbc02d"], ["Tango|Tengen", "#d4af37"], ["^Power", "#e53935"], ["Flamingo", "#f06292"], ["Piccoru", "#43a047"], ["Kisoko", "#7cb342"], ["Ezra|Erza", "#d32f2f"], ["Merlyn", "#7e57c2"], ["Yamomoto", "#e65100"], ["Wavy|Nejir", "#4fc3f7"], ["Ria / Rias", "#c62828"], ["Snake Princess", "#d81b60"], ["Shisu", "#b71c1c"], ["Rayleigh", "#90a4ae"], ["Kenshi", "#c0392b"], ["Poseidon", "#00acc1"], ["Kimomaro", "#b0bec5"], ["Temori", "#f2c94c"], ["Jozo", "#90caf9"], ["Harribu|Harribel", "#26a69a"], ["^Angel", "#ffd54f"], ["Issai", "#d32f2f"], ["Bombietta|Bambietta", "#f8a5c2"], ["Luci / Lucy", "#ffca28"], ["^Boxo", "#d32f2f"], ["Rohon|Rohan", "#558b2f"], ["Daky|Daki", "#e91e63"], ["Ice Queen", "#81d4fa"], ["Getu", "#5d4a8a"], ["Akena|Akeno", "#ffd600"], ["Yoshina|Yoshino", "#80deea"], ["Gowth", "#f48fb1"], ["Heathcliff", "#5d4037"], ["Inuyasha", "#e53935"], ["Ji Mo Ri", "#ffb300"], ["Akin|Aki \\/", "#ef6c00"], ["Tatsumo|Tatsumi", "#388e3c"], ["Madoko|Madoka", "#f06292"], ["^Cooler", "#8e44ad"], ["^Chainsaw", "#ff6d00"], ["Peruna|Perona", "#f06292"], ["Isago|Isagi", "#1565c0"], ["Ipo", "#d32f2f"], ["Buggy", "#1e88e5"], ["Sayako|Sayaka", "#2196f3"], ["Minata|Minato", "#fdd835"], ["Kuneko|Koneko", "#eceff1"], ["Broke|Brook", "#607d8b"], ["Roshy|Roshi", "#fb8c00"], ["Kyoka|Kyoko", "#e53935"], ["Kit / Kite", "#6d4c41"], ["Klay|Klein", "#5c6bc0"], ["Todoro", "#ff5722"], ["Weather", "#00897b"], ["Avdo", "#f4511e"], ["Kizume|Kisame", "#2f80c9"], ["Toshin|Toshiro", "#4dd0e1"], ["Kent", "#d9b02b"], ["Kobeno|Kobeni", "#78909c"], ["Hime", "#f48fb1"], ["Fire Fist", "#ff6d00"], ["Lucky", "#ffd54f"], ["Moriu", "#6a4c93"], ["Oshy", "#ba68c8"], ["Mira", "#eceff1"], ["Denjy", "#ff6d00"], ["Carrot", "#fb8c00"], ["Ichi \\(Full", "#fb6a00"], ["Haka", "#b3e5fc"], ["Renzi", "#e53935"], ["Nami|Navi", "#ff9800"], ["Veko", "#2979ff"], ["Gati", "#d32f2f"], ["Luffo", "#e53935"], ["Shingo", "#7b1fa2"], ["Mecha Freezo", "#8e24aa"]].map(([p,c])=>[new RegExp(p),c]);
-const colorOf=n=>UNIT_COLORS[n]||((CR.find(r=>r[0].test(n))||[])[1]);
+const UNIT_COLORS={};
+const CR=[["Robot Sorcerer","#80cbc4"],["Dio|Over Heaven","#ffd21f"],["Gohan","#9b6bd6"],["Rin\\b","#2d8cff"],["Alucard|Dracula","#ff2a2a"],["Zabuza","#90a4b8"],["A21","#ff6f91"],["Aizen","#a259d9"],["Homura","#8e5bd0"],["Roger","#d32f2f"],["Emilia","#c7a8ff"],["Skull Knight","#cfd8dc"],["Hiei","#e53935"],["\\/ Power","#ff4d4d"],["Thorfinn","#c8a46a"],["Tobi|Toby","#ff8a1f"],["Boros|Boron","#b455e0"],["\\/ Gin","#dfe6ea"],["Gilgamesh","#ffc400"],["Shidou","#78909c"],["Saiki","#ff8fb8"],["Rias","#e5262e"],["Jellal","#2a7de1"],["Unohana","#5f8aa8"],["Lelouch","#9c3fd0"],["Mamy|Mami","#ffd23f"],["Kuma","#a1745a"],["Lucy","#ffd24a"],["Piccolo","#5bd166"],["Chihiro","#e53935"],["Buddha","#ffd34d"],["Tengen","#e6c84a"],["Erza","#e8231f"],["Kisuke","#8bc34a"],["Doflamingo","#ff5fa2"],["Merlin","#a77bff"],["Shisui","#d32f2f"],["Boa","#e91e8c"],["Judar","#6f78e0"],["Rayleigh","#b0bec5"],["Cid","#7c4dff"],["Kenshin","#d84a3c"],["Yamamoto","#ff6a00"],["Kimimaro","#e6edf1"],["Temari","#f2d04d"],["Poseidon","#00b8d4"],["Dazai","#b98a6a"],["Bambietta","#ff9ec7"],["\\/ Angel","#ffe066"],["Pain","#ff7a3c"],["Jozu","#7ec8ff"],["Yoshino","#6ee6f2"],["Issei","#e03535"],["Rohan","#7cb342"],["Madoka","#ff7fb5"],["Boxo","#e53935"],["Geto","#7e57a8"],["Chunibyo","#00e5ff"],["Nagumo","#a1887f"],["Esdeath","#7fd6ff"],["Akeno","#ffd400"],["Perona","#ff7eb8"],["Daki","#ff4f87"],["Gowther","#ff8fb8"],["Jiraiya","#e53935"],["Harribel","#26c6a8"],["Inuyas","#e53935"],["Heathcliff","#8d6e63"],["Roy Mustang","#ff6a2a"],["\\/ Aki","#ff7a1a"],["Jin Mori","#ffb300"],["Tatsumi","#43a047"],["Cooler","#a05bd6"],["Mitsukai","#ff4f9a"],["Denji","#ff6d00"],["Chuya|Chuyo","#e07a3a"],["Isagi","#2e7dff"],["Ippo","#e53935"],["Kyōka|Kyoko","#ff5c5c"],["Sayaka","#2d9cff"],["Minato","#ffd93a"],["Koneko","#f1f5f9"],["Brook","#b0bec5"],["Hidan","#d32f2f"],["Mechamaru","#80cbc4"],["Weather","#26a69a"],["Kite","#43a047"],["Sakamoto","#b0bec5"],["Roshi","#ff9800"],["Osaragi","#a1887f"],["Asushi","#ff9e2c"],["Akutagawa","#bdbdbd"],["Buggy","#2196f3"],["Osaka","#ff8a65"],["Klein","#e53935"],["Nanami","#f2d04d"],["Kisame","#2f9fe8"],["Hinamy","#e57373"],["\\/ Ace","#ff7a1a"],["Ai Hoshino","#b66dff"],["Gaku","#78909c"],["Frieren","#cdb8ff"],["Toshiro","#5fe0f2"],["Avdol","#ff6a2a"],["\\/ Gas","#9e9d24"],["Kobeni","#90a4ae"],["Himeno","#ff8fb8"],["Monet","#4dd9a8"],["Vanilla Ice","#f1f5f9"],["Luck","#ffd54f"],["Moria","#8e63c5"],["Mirko","#f1f5f9"],["Carrot","#ff9a1f"],["Ichigo","#ff7a00"],["Haku","#8ad8ff"],["Nami","#ff9800"],["Veko","#3d8bff"],["Renji","#ff3d3d"],["Shinji","#9c4dd0"],["Mecha Frieza","#a24dd0"],["Luffy","#e53935"]].map(([p,c])=>[new RegExp(p),c]);
+const lift=c=>{if(!c)return c;let r=parseInt(c.slice(1,3),16),g=parseInt(c.slice(3,5),16),b=parseInt(c.slice(5,7),16);const l=(.299*r+.587*g+.114*b)/255;if(l<.5){const t=(.5-l)/(1-l);r=Math.round(r+(255-r)*t);g=Math.round(g+(255-g)*t);b=Math.round(b+(255-b)*t)}return"#"+[r,g,b].map(v=>v.toString(16).padStart(2,"0")).join("")};
+const colorOf=n=>lift(UNIT_COLORS[n]||((CR.find(r=>r[0].test(n))||[])[1]));
 const X=s=>s.replace(/\bU(?=\d)/g,"Update ").replace(/\bLB\b/g,"Leaderboard").replace(/\bIC\b/g,"Infinity Castle").replace(/\bSec\b/g,"Secret").replace(/\bPort\b/g,"Portal").replace(/\bCap\b/g,"Capsule").replace(/\bBan\b/g,"Banner").replace(/- S(\d+)/,"- Season $1");
-let U=[];function buildU(){U=[];TIERS.forEach(([id,lb,rg,rows],ti)=>rows.split("\n").forEach(l=>{const p=l.split("|");U.push({k:U.length,n:p[0],v:p[1]=="OC"?0:+p[1],oc:p[1]=="OC",rr:p[2]=="-"?null:+p[2],d:+p[3],i:X(p[4]),t:p[5]||"s",tier:id[0],ti})}));}buildU();
+const XU=r=>{if(!(+r[1]>0))return;U.push({k:U.length,n:r[0],v:+r[1],oc:false,rr:null,d:+r[2]||0,i:r[3]||"",t:r[4]||"s",tier:"X",ti:-1,x:1})};
+let U=[];function buildU(){U=[];TIERS.forEach(([id,lb,rg,rows],ti)=>rows.split("\n").forEach(l=>{const p=l.split("|");U.push({k:U.length,n:p[0],v:p[1]=="OC"?0:+p[1],oc:p[1]=="OC",rr:p[2]=="-"?null:+p[2],d:+p[3],i:X(p[4]),t:p[5]||"s",tier:id[0],ti})}));[GP,RL].forEach(a=>a.forEach(XU));SK.forEach(g=>g[1].forEach(XU));}buildU();
 let SRV=["54838977578924892286516432768563","08728651572585100365498782468040","54679584188166552564193989016956","49069757631847598572877694649131","21579275969731666698287908100326"];
-const TABS=[["S","S Tier"],["A","A Tier"],["B","B Tier"],["C","C Tier"],["calc","Калькулятор"],["g","Геймпассы"],["r","Реликвии"],["k","Скины"],["st","Статы"],["srv","Серверы"],["info","Инфо"]];
-const TL={s:["Стабильно","t-s"],u:["Нестабильно","t-u"],o:["Завышено","t-o"],r:["Растёт","t-r"],d:["Падает","t-d"]};
+const TABS=[["S","tab_S"],["A","tab_A"],["B","tab_B"],["C","tab_C"],["calc","tab_calc"],["g","tab_g"],["r","tab_r"],["k","tab_k"],["st","tab_st"],["srv","tab_srv"],["info","tab_info"]];
+const TL={h:["tr_h","t-h"],s:["tr_s","t-s"],u:["tr_u","t-u"],o:["tr_o","t-o"],r:["tr_r","t-r"],d:["tr_d","t-d"]};
+const I18={en:{"search_ph":"Search unit…","search_al":"Search unit","theme":"Toggle theme","nav":"Sections","sponsored":"Sponsored by","tab_S":"S Tier","tab_A":"A Tier","tab_B":"B Tier","tab_C":"C Tier","tab_calc":"Calculator","tab_g":"Gamepasses","tab_r":"Relics","tab_k":"Skins","tab_st":"Stats","tab_srv":"Servers","tab_info":"Info","tr_h":"Hyped","tr_s":"Stable","tr_u":"Unstable","tr_o":"Overpriced","tr_r":"Rising","tr_d":"Declining","note_b":"Disclaimer:","note_t":"this list is only a guide. Don't base 100% of your trades on it.","n_name":"Name","n_value":"Value","n_demand":"Demand","n_trend":"Trend","n_info":"Information","nh_g":"Gamepass","nh_r":"Relic","nh_k":"Skin","nh_st":"Stat","owner":"Owner's choice","owner_s":"owner's choice","give":"Give","get":"Get","filter_al":"Filter by trend","any_trend":"Any trend","sort_al":"Sort","s_def":"By tier","s_v":"Value ↓","s_va":"Value ↑","s_d":"Demand ↓","s_da":"Demand ↑","search_all":"Searching all tiers","units_n":"units","nothing":"Nothing found","value_lbl":"value","open":"Open","copy":"Copy","rank":"Rank","of":"of","top":"Top","calc_ph":"Find a unit and add it to the trade…","calc_al":"Find unit","i_give":"I give","i_get":"I get","swap":"Swap sides","clear":"Clear","copy_trade":"Copy trade","empty":"Empty","remove":"Remove","added":"Added: ","copied_trade":"Trade copied","copied_link":"Link copied","copied_msg":"Message copied","copy_fail":"Couldn't copy","res_empty":"Add units to both sides","res_eq":"Even trade","res_plus":"You gain ","res_minus":"You lose ","res_fair":"almost fair","res_small":"slightly lopsided","res_big":"very lopsided","t_give":"I give: ","t_get":"I get: ","info_note":"Values are a guide. Rerolls (RR) depend on how much the owner is willing to overpay.","info":[["Key: trends",[["t-s","Stable — consistently maintains value"],["t-h","Hyped — unit is very popular"],["t-u","Unstable — value is fluctuating"],["sw-b","Rising — increasing in value"],["sw-o","Declining — decreasing in value"],["t-o","Overpriced — inflated/manipulated beyond worth (doesn't stack)"]]],["Key: demand",[["d-vh","Very high: 8.5–10"],["d-h","High / above average: 5.5–8"],["d-a","Average: 5"],["d-l","Below average / low: 3–4.5"],["d-vl","Very low: 1–2.5"]]],["Rerolls (RR)",[["d-h","Mid S tier+: RR value varies by owner"],["d-l","High A – B tier: ~20 value = 1 reroll"],["d-vl","C tier: generally not traded for rerolls"]]],["Trading terms",[["sw-o","Upgrade: multiple small units for one big unit"],["sw-b","Downgrade: one big unit for multiple small units"],["sw-n","Clean: unit isn't duped (see dupe list)"]]],["Disclaimers",[["sw-b","Rerolls fluctuate depending on willingness to overpay"],["sw-b","High-demand units tend to get overpay"],["sw-b","Demand values are relative to each tier"]]]]},ru:{"search_ph":"Поиск юнита…","search_al":"Поиск юнита","theme":"Сменить тему","nav":"Разделы","sponsored":"Спонсировано","tab_S":"S Tier","tab_A":"A Tier","tab_B":"B Tier","tab_C":"C Tier","tab_calc":"Калькулятор","tab_g":"Геймпассы","tab_r":"Реликвии","tab_k":"Скины","tab_st":"Статы","tab_srv":"Серверы","tab_info":"Инфо","tr_h":"Хайп","tr_s":"Стабильно","tr_u":"Нестабильно","tr_o":"Завышено","tr_r":"Растёт","tr_d":"Падает","note_b":"Внимание:","note_t":"список — лишь ориентир. Не основывайте на нём 100% ваших трейдов.","n_name":"Название","n_value":"Ценность","n_demand":"Спрос","n_trend":"Тренд","n_info":"Информация","nh_g":"Геймпасс","nh_r":"Реликвия","nh_k":"Скин","nh_st":"Стат","owner":"По выбору владельца","owner_s":"по выбору","give":"Отдаю","get":"Получаю","filter_al":"Фильтр по тренду","any_trend":"Любой тренд","sort_al":"Сортировка","s_def":"По тирам","s_v":"Цена ↓","s_va":"Цена ↑","s_d":"Спрос ↓","s_da":"Спрос ↑","search_all":"Поиск по всем тирам","units_n":"юнитов","nothing":"Ничего не найдено","value_lbl":"ценность","open":"Открыть","copy":"Копировать","rank":"Место","of":"из","top":"Топ","calc_ph":"Найти юнита и добавить в трейд…","calc_al":"Найти юнита","i_give":"Я отдаю","i_get":"Я получаю","swap":"Поменять стороны","clear":"Очистить","copy_trade":"Копировать трейд","empty":"Пусто","remove":"Удалить","added":"Добавлено: ","copied_trade":"Трейд скопирован","copied_link":"Ссылка скопирована","copied_msg":"Сообщение скопировано","copy_fail":"Не удалось скопировать","res_empty":"Добавьте юнитов в обе стороны","res_eq":"Равный трейд","res_plus":"Вы в плюсе на ","res_minus":"Вы в минусе на ","res_fair":"почти честно","res_small":"небольшой перекос","res_big":"сильный перекос","t_give":"Я отдаю: ","t_get":"Я получаю: ","info_note":"Ценности — ориентир. Ролл-токены (RR) зависят от желания владельца переплатить.","info":[["Ключ: тренды",[["t-s","Стабильно — держит ценность"],["t-h","Хайп — юнит очень популярен"],["t-u","Нестабильно — ценность колеблется"],["sw-b","Растёт — ценность растёт"],["sw-o","Падает — ценность падает"],["t-o","Завышено — цена раздута выше реальной (не суммируется)"]]],["Ключ: спрос",[["d-vh","Очень высокий: 8.5–10"],["d-h","Высокий / выше среднего: 5.5–8"],["d-a","Средний: 5"],["d-l","Ниже среднего / низкий: 3–4.5"],["d-vl","Очень низкий: 1–2.5"]]],["Реролы (RR)",[["d-h","Mid S и выше: цена RR зависит от владельца"],["d-l","High A – B: ~20 ценности = 1 ролл"],["d-vl","C-тир: обычно не меняют на роллы"]]],["Торговые термины",[["sw-o","Upgrade: несколько мелких юнитов за один крупный"],["sw-b","Downgrade: один крупный юнит за несколько мелких"],["sw-n","Clean: юнит не дюпнутый (см. список дюпов)"]]],["Важно",[["sw-b","Роллы колеблются в зависимости от готовности переплатить"],["sw-b","Юниты с высоким спросом обычно переплачивают"],["sw-b","Спрос указан относительно своего тира"]]]]}};
+const _t=k=>{const l=I18[st.lang]||I18.en;return l[k]!==undefined?l[k]:(I18.en[k]!==undefined?I18.en[k]:k)};
 const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const fmt=n=>n.toLocaleString("ru"),dc=d=>d>=8?"d-vh":d>=6?"d-h":d==5?"d-a":d>=3?"d-l":"d-vl";
+const fmt=n=>n.toLocaleString(st.lang=="ru"?"ru":"en-US"),dc=d=>d>=8.5?"d-vh":d>=6.5?"d-h":d>=5.5?"d-m":d==5?"d-a":d==4.5?"d-b":d>=3?"d-l":d>0?"d-vl":"d-z";
 const P={search:'<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/>',cv:'<path d="M6 9l6 6 6-6"/>',up:'<path d="M12 19V5M6 11l6-6 6 6"/>',dn:'<path d="M12 5v14M6 13l6 6 6-6"/>',rt:'<path d="M5 12h14M13 6l6 6-6 6"/>',lt:'<path d="M19 12H5M11 6l-6 6 6 6"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',star:'<path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/>',swap:'<path d="M7 7h12M16 4l3 3-3 3M17 17H5M8 14l-3 3 3 3"/>',copy:'<rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M5 15V5.5A1.5 1.5 0 0 1 6.5 4H15"/>',open:'<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>',info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.01"/>'};
 const I=(p,s=20)=>`<svg class="i" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${p}</svg>`;
 const nmH=n=>esc(n).replace(/\(SHINY\)/g,'<span class="sh">SHINY</span>').replace(/RAINBOW/g,'<span class="rb">RAINBOW</span>');
@@ -623,7 +273,7 @@ for(const t of ts){let b=-1;for(const w of u._w){const r=tm(w,t);if(r>=0&&(b<0||
 if(!ok&&ts.length>1){const r=tm(u._j,ts.join(""));if(r>=0){ok=true;tot=r}}
 if(ok&&(best<0||tot<best))best=tot}
 return best}
-let st={tab:"S",SH:false,TR:"",so:"def",L:[],R:[],th:""},q="",shut=new Set(),CQ="";
+let st={tab:"S",SH:false,TR:"",so:"def",L:[],R:[],th:"",lang:"en"},q="",shut=new Set(),CQ="";
 try{Object.assign(st,JSON.parse(localStorage.getItem("aa_st")||"{}"))}catch(e){}
 const ixOf=a=>(Array.isArray(a)?a:[]).map(x=>typeof x=="number"?(U[x]&&U[x].n):x).map(n=>U.findIndex(u=>u.n==n)).filter(i=>i>=0);
 st.L=ixOf(st.L);st.R=ixOf(st.R);
@@ -632,91 +282,106 @@ const save=()=>{try{localStorage.setItem("aa_st",JSON.stringify({...st,L:nmOf(st
 if(st.th)document.documentElement.dataset.theme=st.th;
 function toast(t){const e=$("#toast");e.textContent=t;e.style.opacity=1;clearTimeout(e.h);e.h=setTimeout(()=>e.style.opacity=0,1500)}
 const cols=o=>"minmax(190px,1.5fr) 120px"+(o.rr?" 90px":"")+(o.d?" 84px":"")+(o.t?" 120px":"")+" minmax(220px,2.2fr)";
-function headH(o){const s=(k,t,c)=>`<div class="srt ${c}" data-s="${k}" tabindex="0" role="button">${t}${st.so==k?I(P.dn,14):st.so==k+"a"?I(P.up,14):""}</div>`;return `<div class="head" style="--cols:${cols(o)}"><div class="hn">${o.nameH||"Название"}</div>${o.sort?s("v","Ценность","hv"):'<div class="hv">Ценность</div>'}${o.rr?'<div class="hr">Ролл-токены</div>':""}${o.d?(o.sort?s("d","Спрос","hd"):'<div class="hd">Спрос</div>'):""}${o.t?'<div class="ht">Тренд</div>':""}<div class="hi">Информация</div></div>`}
-function rowH(o,u){const c=cols(o);return `<div class="row" style="--cols:${c}${u&&colorOf(u.n)?";--glow:"+colorOf(u.n):""}"${u?` data-k="${u.k}" tabindex="0"`:""}${u&&colorOf(u.n)?" data-glow":""}><div class="c n">${nmH(o.n)}</div><div class="c v${o.oc?" oc":""}">${o.oc?"По выбору владельца":fmt(o.v)}</div>${o.rr?`<div class="c r"><span class="lb">RR</span>${o.rr}</div>`:""}${o.d?`<div class="c d"><span class="lb">Спрос</span><span class="pill ${dc(o.d)}">${o.d}</span></div>`:""}${o.t?`<div class="c t"><span class="pill ${TL[o.t][1]}">${TL[o.t][0]}</span></div>`:""}<div class="c i">${esc(o.i)}</div>${u?`<div class="act"><button class="btn" data-a="L${u.k}">${I(P.rt,18)}Отдаю</button><button class="btn" data-a="R${u.k}">${I(P.lt,18)}Получаю</button></div>`:""}</div>`}
-const NOTE=`<div class="note">${I(P.info,20)}<span><b>Внимание:</b> список — лишь ориентир. Не основывайте на нём 100% ваших трейдов.</span></div>`;
+function headH(o){const s=(k,t,c)=>`<div class="srt ${c}" data-s="${k}" tabindex="0" role="button">${t}${st.so==k?I(P.dn,14):st.so==k+"a"?I(P.up,14):""}</div>`;return `<div class="head" style="--cols:${cols(o)}"><div class="hn">${o.nameH||_t("n_name")}</div>${o.sort?s("v",_t("n_value"),"hv"):`<div class="hv">${_t("n_value")}</div>`}${o.d?(o.sort?s("d",_t("n_demand"),"hd"):`<div class="hd">${_t("n_demand")}</div>`):""}${o.t?`<div class="ht">${_t("n_trend")}</div>`:""}<div class="hi">${_t("n_info")}</div></div>`}
+function eqH(u){const p=u.n.split(" / "),cl=t=>t.replace(/\s*\((SHINY)\)/g,"").replace(/\s*RAINBOW/g,"").trim(),pre="TRADING "+(/\(SHINY\)/.test(u.n)?"SHINY ":/RAINBOW/.test(u.n)?"RAINBOW ":""),v=[cl(p[0])];if(p[1]&&cl(p[1])!=v[0])v.push(cl(p[1]));return `<div class="eq">${v.map(t=>{const m=(pre+t).toUpperCase();return `<button class="btn" data-cpm="${esc(m)}"><span>${esc(m)}</span>${I(P.copy,18)}</button>`}).join("")}</div>`}
+function rowH(o,u,lo){lo=lo||o;const c=cols(lo);const tt=TL[o.t||"s"]||TL.s;return `<div class="row" style="--cols:${c}${u&&!u.x&&colorOf(u.n)?";--glow:"+colorOf(u.n):""}"${u?` data-k="${u.k}" tabindex="0"`:""}${u&&!u.x&&colorOf(u.n)?" data-glow":""}${u&&!u.x&&/SHINY/.test(u.n)?" data-shiny":""}><div class="c n">${nmH(o.n)}</div><div class="c v${o.oc?" oc":""}">${o.oc?_t("owner"):fmt(o.v)}</div>${lo.d?`<div class="c d"><span class="lb">${_t("n_demand")}</span><span class="pill ${dc(o.d)}">${o.d}</span></div>`:""}${lo.t?`<div class="c t"><span class="pill ${tt[1]}">${_t(tt[0])}</span></div>`:""}<div class="c i">${esc(o.i)}</div>${u?`<div class="act"><button class="btn" data-a="L${u.k}">${I(P.rt,18)}${_t("give")}</button><button class="btn" data-a="R${u.k}">${I(P.lt,18)}${_t("get")}</button>${eqH(u)}</div>`:""}</div>`}
+const XK=n=>U.find(u=>u.x&&u.n==n)||null;
+const NOTE=()=>`<div class="note">${I(P.info,20)}<span><b>${_t("note_b")}</b> ${_t("note_t")}</span></div>`;
 function units(){
-const all=q.length>0,o={rr:1,d:1,t:1,sort:1};
-let a=U.filter(u=>(all||u.tier==st.tab)&&(!st.SH||/SHINY/.test(u.n))&&(!st.TR||u.t==st.TR)&&score(u,q)>=0);
+const all=q.length>0,o={d:1,t:1,sort:1};
+let a=U.filter(u=>!u.x&&(all||u.tier==st.tab)&&(!st.SH||/SHINY/.test(u.n))&&(!st.TR||u.t==st.TR)&&score(u,q)>=0);
 const srt=st.so!="def";
 if(srt)a=[...a].sort((x,y)=>st.so=="v"?y.v-x.v:st.so=="va"?x.v-y.v:st.so=="d"?y.d-x.d:x.d-y.d);
-let h=NOTE+`<div class="tools"><button class="chip ${st.SH?"on":""}" data-sh="1" aria-pressed="${st.SH}">${I(P.star,18)}SHINY</button><i class="sp"></i><select id="ft" aria-label="Фильтр по тренду"><option value="">Любой тренд</option>${Object.entries(TL).map(([k,v])=>`<option value="${k}"${st.TR==k?" selected":""}>${v[0]}</option>`).join("")}</select><i class="sp"></i><select id="so" aria-label="Сортировка">${[["def","По тирам"],["v","Цена ↓"],["va","Цена ↑"],["d","Спрос ↓"],["da","Спрос ↑"]].map(x=>`<option value="${x[0]}"${st.so==x[0]?" selected":""}>${x[1]}</option>`).join("")}</select><span class="cnt">${all?"Поиск по всем тирам · ":""}${a.length} юнитов</span></div><div class="table">${headH(o)}`;
-if(!a.length)h+=`<div class="empty">Ничего не найдено</div>`;
-else if(srt)h+=`<div class="grp">${a.map(u=>rowH({...u,rr:u.rr||"–"},u)).join("")}</div>`;
-else{let last=-1,open=false;a.forEach(u=>{if(u.ti!=last){if(open)h+="</div>";last=u.ti;open=true;const t=TIERS[u.ti],n=a.filter(x=>x.ti==u.ti).length;h+=`<div class="band${shut.has(u.ti)?" shut":""}" data-b="${u.ti}" tabindex="0"><span class="chev">${I(P.cv,20)}</span><i class="dot k${t[0][0]}"></i>${t[1]}<small>${t[2]?"ценность "+t[2]:""}</small><span class="n2">${n}</span></div><div class="grp">`}h+=rowH({...u,rr:u.rr||"–"},u)});if(open)h+="</div>"}
+let h=NOTE()+`<div class="tools"><button class="chip ${st.SH?"on":""}" data-sh="1" aria-pressed="${st.SH}">${I(P.star,18)}SHINY</button><i class="sp"></i><select id="ft" aria-label="${_t("filter_al")}"><option value="">${_t("any_trend")}</option>${Object.entries(TL).map(([k,v])=>`<option value="${k}"${st.TR==k?" selected":""}>${_t(v[0])}</option>`).join("")}</select><i class="sp"></i><select id="so" aria-label="${_t("sort_al")}">${[["def",_t("s_def")],["v",_t("s_v")],["va",_t("s_va")],["d",_t("s_d")],["da",_t("s_da")]].map(x=>`<option value="${x[0]}"${st.so==x[0]?" selected":""}>${x[1]}</option>`).join("")}</select><span class="cnt">${all?_t("search_all")+" · ":""}${a.length} ${_t("units_n")}</span></div><div class="table">${headH(o)}`;
+if(!a.length)h+=`<div class="empty">${_t("nothing")}</div>`;
+else if(srt)h+=`<div class="grp">${a.map(u=>rowH(u,u,o)).join("")}</div>`;
+else{let last=-1,open=false;a.forEach(u=>{if(u.ti!=last){if(open)h+="</div>";last=u.ti;open=true;const t=TIERS[u.ti],n=a.filter(x=>x.ti==u.ti).length;h+=`<div class="band${shut.has(u.ti)?" shut":""}" data-b="${u.ti}" data-tier="${t[0][0]}" tabindex="0"><span class="chev">${I(P.cv,20)}</span><i class="dot k${t[0][0]}"></i>${t[1]}<small>${t[2]?_t("value_lbl")+" "+t[2]:""}</small><span class="n2">${n}</span></div><div class="grp">`}h+=rowH(u,u,o)});if(open)h+="</div>"}
 return h+"</div>"}
-function simple(rows,o,title){return NOTE+`<div class="table">${headH(o)}${title?`<div class="sec">${title}</div>`:""}${rows.map(r=>rowH({n:r[0],v:r[1],rr:o.rr?r[2]:0,d:o.rr?0:r[2],t:o.t?(r[4]||"s"):"",i:r[3]},null)).join("")}</div>`}
-function skins(){return NOTE+SK.map(s=>`<div class="table" style="margin-bottom:14px">${headH({d:1,nameH:"Скин"})}<div class="sec">${s[0]=="Rainbow"?"Rainbow Skins":"Normal Skins"}</div>${s[1].map(r=>rowH({n:r[0],v:r[1],d:r[2],i:r[3]},null)).join("")}</div>`).join("")}
+function simple(rows,o,title){return NOTE()+`<div class="table">${headH(o)}${title?`<div class="sec">${title}</div>`:""}${rows.map(r=>rowH({n:r[0],v:r[1],d:r[2],t:r[4]||"s",i:r[3]},o.x?XK(r[0]):null,o)).join("")}</div>`}
+function skins(){return NOTE()+SK.map(s=>`<div class="table" style="margin-bottom:14px">${headH({d:1,t:1,nameH:_t("nh_k")})}<div class="sec">${s[0]=="Rainbow"?"Rainbow Skins":"Normal Skins"}</div>${s[1].map(r=>rowH({n:r[0],v:r[1],d:r[2],t:r[4]||"s",i:r[3]},XK(r[0]),{d:1,t:1})).join("")}</div>`).join("")}
 function box(t,items){return `<div class="card"><h3>${t}</h3>${items.map(i=>`<div class="ln"><span class="sw ${i[0]}"></span><span>${i[1]}</span></div>`).join("")}</div>`}
-function info(){return `<div class="grid">`+
-box("Ключ: тренды",[["t-s","Стабильно — держит ценность"],["t-u","Нестабильно — ценность колеблется"],["sw-b","Растёт — ценность растёт"],["sw-o","Падает — ценность падает"],["t-o","Завышено — цена раздута выше реальной"]])+
-box("Ключ: спрос",[["d-vh","Очень высокий: 8–10"],["d-h","Высокий: 6–7"],["d-a","Средний: 5"],["d-l","Низкий: 3–4"],["d-vl","Очень низкий: 1–2"]])+
-box("Реролы (RR)",[["d-h","Mid S и выше: цена RR зависит от владельца"],["d-l","High A – B: ~20 ценности = 1 ролл"],["d-vl","C-тир: обычно не меняют на роллы"]])+
-box("Торговые термины",[["sw-o","Upgrade: несколько мелких юнитов за один крупный"],["sw-b","Downgrade: один крупный юнит за несколько мелких"],["sw-n","Clean: юнит не дюпнутый"]])+
-box("Важно",[["sw-b","Роллы колеблются в зависимости от готовности переплатить"],["sw-b","Юниты с высоким спросом обычно переплачивают"],["sw-b","Спрос указан относительно своего тира"]])+`</div>`}
-function srv(){return `<div class="grid">`+SRV.map((c,i)=>{const u="https://www.roblox.com/games/8304191830?privateServerLinkCode="+c;return `<div class="card srv"><h3>Trading Server ${i+1}</h3><div class="lk">${u}</div><div class="bt"><a class="btn pri" href="${u}" target="_blank" rel="noopener">${I(P.open,18)}Открыть</a><button class="btn" data-cp="${u}">${I(P.copy,18)}Копировать</button></div></div>`}).join("")+`</div>`}
+function info(){return `<div class="grid">`+(I18[st.lang]||I18.en).info.map(b=>box(b[0],b[1])).join("")+`</div>`}
+function srv(){return `<div class="grid">`+SRV.map((c,i)=>{const u="https://www.roblox.com/games/8304191830/CHRISTMAS-RERELEASE-TOURNAMENT-AA?privateServerLinkCode="+c;return `<div class="card srv"><h3>Trading Server ${i+1}</h3><div class="lk">${u}</div><div class="bt"><a class="btn pri" href="${u}" target="_blank" rel="noopener">${I(P.open,18)}${_t("open")}</a><button class="btn" data-cp="${u}">${I(P.copy,18)}${_t("copy")}</button></div></div>`}).join("")+`</div>`}
 const sm=a=>a.reduce((t,k)=>t+(U[k].oc?0:U[k].v),0);
-function calcUI(){return `<div class="search" style="max-width:none;margin:0 0 12px">${I(P.search,20)}<input id="cq" placeholder="Найти юнита и добавить в трейд…" aria-label="Найти юнита" value="${esc(CQ)}" style="width:100%"></div><div class="side" id="cf" style="display:none;margin-bottom:12px"></div><div class="res" id="rs" role="status"></div><div class="two"><div class="side"><h3><span>Я отдаю</span><span id="tL">0</span></h3><div id="cL"></div></div><div class="side"><h3><span>Я получаю</span><span id="tR">0</span></h3><div id="cR"></div></div></div><div class="tools free" style="margin-top:12px"><button class="btn" data-sw="1">${I(P.swap,18)}Поменять стороны</button><button class="btn" data-cl="1">Очистить</button><button class="btn pri" data-copy="1">${I(P.copy,18)}Копировать трейд</button></div>`}
+function calcUI(){return `<div class="search" style="max-width:none;margin:0 0 12px">${I(P.search,20)}<input id="cq" placeholder="${_t("calc_ph")}" aria-label="${_t("calc_al")}" value="${esc(CQ)}" style="width:100%"></div><div class="side" id="cf" style="display:none;margin-bottom:12px"></div><div class="res" id="rs" role="status"></div><div class="two"><div class="side"><h3><span>${_t("i_give")}</span><span id="tL">0</span></h3><div id="cL"></div></div><div class="side"><h3><span>${_t("i_get")}</span><span id="tR">0</span></h3><div id="cR"></div></div></div><div class="tools free" style="margin-top:12px"><button class="btn" data-sw="1">${I(P.swap,18)}${_t("swap")}</button><button class="btn" data-cl="1">${_t("clear")}</button><button class="btn pri" data-copy="1">${I(P.copy,18)}${_t("copy_trade")}</button></div>`}
 function calc(){const v=CQ.trim().toLowerCase(),f=$("#cf");if(!f)return;
-if(v){const r=U.map(u=>[u,score(u,v)]).filter(x=>x[1]>=0).sort((a,b)=>a[1]-b[1]).slice(0,8).map(x=>x[0]);f.style.display="block";f.innerHTML=r.map(u=>`<div class="sr"><span>${nmH(u.n)}</span><span class="v2">${u.oc?"по выбору":fmt(u.v)}</span><button class="btn ic" data-a="L${u.k}" title="Отдаю" aria-label="Отдаю">${I(P.rt,18)}</button><button class="btn ic" data-a="R${u.k}" title="Получаю" aria-label="Получаю">${I(P.lt,18)}</button></div>`).join("")||`<div class="empty">Ничего не найдено</div>`}else f.style.display="none";
-for(const s of["L","R"]){const a=st[s];$("#c"+s).innerHTML=a.map((k,j)=>`<div class="li"><span>${nmH(U[k].n)}</span><span><b>${U[k].oc?"по выбору":fmt(U[k].v)}</b><button class="x" data-x="${s}${j}" aria-label="Удалить" title="Удалить">${I(P.x,18)}</button></span></div>`).join("")||`<div class="empty" style="padding:16px">Пусто</div>`;$("#t"+s).textContent=fmt(sm(a))}
-const a=sm(st.L),b=sm(st.R);let t=!st.L.length&&!st.R.length?"Добавьте юнитов в обе стороны":a==b?"Равный трейд":(b>a?"Вы в плюсе на ":"Вы в минусе на ")+fmt(Math.abs(b-a));
-if(a&&b&&a!=b){const p=Math.round(Math.abs(a-b)/Math.max(a,b)*100);t+=` (${p}%) · ${p<=10?"почти честно":p<=25?"небольшой перекос":"сильный перекос"}`}$("#rs").textContent=t}
-function nav(){const n=st.L.length+st.R.length;$("#tabs").innerHTML=TABS.map(t=>`<button class="${t[0]==st.tab?"on":""}" data-t="${t[0]}"${t[0]==st.tab?' aria-current="page"':""}>${t[1]}${t[0]=="calc"&&n?`<b>${n}</b>`:""}</button>`).join("");const tb=$("#tabs"),on=tb.querySelector(".on");if(on)tb.scrollTo({left:on.offsetLeft-(tb.clientWidth-on.offsetWidth)/2,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}
+if(v){const r=U.map(u=>[u,score(u,v)]).filter(x=>x[1]>=0).sort((a,b)=>a[1]-b[1]).slice(0,8).map(x=>x[0]);f.style.display="block";f.innerHTML=r.map(u=>`<div class="sr"><span>${nmH(u.n)}</span><span class="v2">${u.oc?_t("owner_s"):fmt(u.v)}</span><button class="btn ic" data-a="L${u.k}" title="${_t("give")}" aria-label="${_t("give")}">${I(P.rt,18)}</button><button class="btn ic" data-a="R${u.k}" title="${_t("get")}" aria-label="${_t("get")}">${I(P.lt,18)}</button></div>`).join("")||`<div class="empty">${_t("nothing")}</div>`}else f.style.display="none";
+for(const s of["L","R"]){const a=st[s];$("#c"+s).innerHTML=a.map((k,j)=>`<div class="li"><span>${nmH(U[k].n)}</span><span><b>${U[k].oc?_t("owner_s"):fmt(U[k].v)}</b><button class="x" data-x="${s}${j}" aria-label="${_t("remove")}" title="${_t("remove")}">${I(P.x,18)}</button></span></div>`).join("")||`<div class="empty" style="padding:16px">${_t("empty")}</div>`;$("#t"+s).textContent=fmt(sm(a))}
+const a=sm(st.L),b=sm(st.R);let t=!st.L.length&&!st.R.length?_t("res_empty"):a==b?_t("res_eq"):(b>a?_t("res_plus"):_t("res_minus"))+fmt(Math.abs(b-a));
+if(a&&b&&a!=b){const p=Math.round(Math.abs(a-b)/Math.max(a,b)*100);t+=` (${p}%) · ${p<=10?_t("res_fair"):p<=25?_t("res_small"):_t("res_big")}`}const rs=$("#rs");rs.textContent=t;rs.dataset.r=!st.L.length&&!st.R.length?"":a==b?"e":b>a?"p":"m"}
+let IND=null;
+function nav(){const n=st.L.length+st.R.length,tb=$("#tabs");tb.innerHTML=TABS.map(t=>`<button class="${t[0]==st.tab?"on":""}" data-t="${t[0]}"${t[0]==st.tab?' aria-current="page"':""}>${_t(t[1])}${t[0]=="calc"&&n?`<b>${n}</b>`:""}</button>`).join("");if(!IND){IND=document.createElement("i");IND.className="ind"}tb.appendChild(IND);const on=tb.querySelector(".on");if(on){const first=!IND.dataset.i;if(first)IND.style.transition="none";else void IND.offsetWidth;IND.style.width=on.offsetWidth+"px";IND.style.transform=`translateX(${on.offsetLeft}px)`;if(first){IND.dataset.i=1;void IND.offsetWidth;IND.style.transition=""}tb.scrollTo({left:on.offsetLeft-(tb.clientWidth-on.offsetWidth)/2,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}}
+let LT=null;function enter(t){if(t===LT)return;LT=t;const m=$("#m");m.classList.remove("enter");m.querySelectorAll(".row").forEach((r,i)=>r.style.setProperty("--i",Math.min(i,22)));void m.offsetWidth;m.classList.add("enter");clearTimeout(m.eh);m.eh=setTimeout(()=>m.classList.remove("enter"),1100)}
 function render(){nav();const m=$("#m"),t=st.tab;
-m.innerHTML=("SABC".includes(t)||(q&&t!="calc"&&!["info","srv"].includes(t)&&false))?units():t=="calc"?calcUI():t=="g"?simple(GP,{d:1,t:1,nameH:"Геймпасс"}):t=="r"?simple(RL,{d:1,t:1,nameH:"Реликвия"}):t=="k"?skins():t=="st"?simple(ST,{rr:1,nameH:"Стат"},"Stats (SSS)"):t=="info"?info():srv();
+m.innerHTML=("SABC".includes(t)||(q&&t!="calc"&&!["info","srv"].includes(t)&&false))?units():t=="calc"?calcUI():t=="g"?simple(GP,{x:1,d:1,t:1,nameH:_t("nh_g")}):t=="r"?simple(RL,{x:1,d:1,t:1,nameH:_t("nh_r")}):t=="k"?skins():t=="st"?simple(ST,{d:1,t:1,nameH:_t("nh_st")}):t=="info"?info():srv();
 if(t=="calc"){const i=$("#cq");i.oninput=e=>{CQ=e.target.value;calc()};calc()}
-if(t=="info")m.insertAdjacentHTML("afterbegin",`<div class="note">${I(P.info,20)}<span>Ценности — ориентир. Ролл-токены (RR) зависят от желания владельца переплатить.</span></div>`);
+if(t=="info")m.insertAdjacentHTML("afterbegin",`<div class="note">${I(P.info,20)}<span>${_t("info_note")}</span></div>`);
 if("SABC".includes(t)){$("#so").onchange=e=>{st.so=e.target.value;save();render()};$("#ft").onchange=e=>{st.TR=e.target.value;save();render()}}
-save()}
+enter(t);save()}
+function applyStatic(){document.documentElement.lang=st.lang;const q=$("#q");q.placeholder=_t("search_ph");q.setAttribute("aria-label",_t("search_al"));const th=$("#th");th.setAttribute("aria-label",_t("theme"));th.title=_t("theme");$("#tabs").setAttribute("aria-label",_t("nav"));$("#sp").innerHTML=_t("sponsored")+" <b>Kuzma Game</b>";$("#lg").setAttribute("aria-label","Language");document.querySelectorAll("#lg button").forEach(b=>b.classList.toggle("on",b.dataset.lang==st.lang))}
 $("#q").oninput=e=>{q=e.target.value.toLowerCase();if(q&&!"SABC".includes(st.tab))st.tab="S";render()};
-$("#th").onclick=()=>{const r=document.documentElement,dk=r.dataset.theme?r.dataset.theme=="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=st.th=dk?"light":"dark";save()};
+$("#th").onclick=()=>{const r=document.documentElement,dk=r.dataset.theme=="dark";r.dataset.theme=st.th=dk?"light":"dark";save()};
+function copyTxt(t){return new Promise((ok,no)=>{const fb=()=>{try{const a=document.createElement("textarea");a.value=t;a.setAttribute("readonly","");a.style.cssText="position:fixed;top:0;left:0;opacity:0";document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);const r=document.execCommand("copy");a.remove();r?ok():no()}catch(e){no()}};if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(ok,fb);else fb()})}
 document.addEventListener("click",e=>{const g=s=>e.target.closest(s);let x;
+if(x=g("[data-lang]")){st.lang=x.dataset.lang;save();applyStatic();render();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(nav);addEventListener("resize",nav);return}
 if(x=g("[data-t]")){st.tab=x.dataset.t;render();scrollTo(0,0);return}
-if(x=g("[data-a]")){const d=x.dataset.a;st[d[0]].push(+d.slice(1));toast("Добавлено: "+U[+d.slice(1)].n);save();nav();if(st.tab=="calc")calc();return}
+if(x=g("[data-trade]")){const[p,q2]=x.dataset.trade.split(",").map(Number);st.L=[p];st.R=[q2];toast(_t("added")+U[p].n+" ⇄ "+U[q2].n);save();st.tab="calc";render();scrollTo(0,0);return}
+if(x=g("[data-offer]")){const[l,r]=x.dataset.offer.split("|").map(t=>t.split(",").map(Number));st.L=l;st.R=r;toast(_t("added")+U[r[0]].n);save();st.tab="calc";render();scrollTo(0,0);return}
+if(x=g("[data-cpm]")){copyTxt(x.dataset.cpm).then(()=>toast(_t("copied_msg")),()=>toast(_t("copy_fail")));return}
+if(x=g("[data-a]")){const d=x.dataset.a;st[d[0]].push(+d.slice(1));toast(_t("added")+U[+d.slice(1)].n);save();nav();if(st.tab=="calc")calc();return}
 if(x=g("[data-x]")){st[x.dataset.x[0]].splice(+x.dataset.x.slice(1),1);save();nav();calc();return}
 if(x=g("[data-sw]")){[st.L,st.R]=[st.R,st.L];save();calc();return}
 if(g("[data-cl]")){st.L=[];st.R=[];CQ="";save();render();return}
-if(g("[data-copy]")){const ls=a=>a.map(k=>U[k].n).join(", ")||"—",t=`Я отдаю: ${ls(st.L)} (${fmt(sm(st.L))})\nЯ получаю: ${ls(st.R)} (${fmt(sm(st.R))})\n${$("#rs").textContent}`;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast("Трейд скопирован"),()=>toast("Не удалось скопировать"));return}
-if(x=g("[data-cp]")){(navigator.clipboard?navigator.clipboard.writeText(x.dataset.cp):Promise.reject()).then(()=>toast("Ссылка скопирована"),()=>toast("Не удалось скопировать"));return}
+if(g("[data-copy]")){const ls=a=>a.map(k=>U[k].n).join(", ")||"—",t=`${_t("t_give")}${ls(st.L)} (${fmt(sm(st.L))})\n${_t("t_get")}${ls(st.R)} (${fmt(sm(st.R))})\n${$("#rs").textContent}`;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast(_t("copied_trade")),()=>toast(_t("copy_fail")));return}
+if(x=g("[data-cp]")){copyTxt(x.dataset.cp).then(()=>toast(_t("copied_link")),()=>toast(_t("copy_fail")));return}
 if(g("[data-sh]")){st.SH=!st.SH;render();return}
 if(x=g("[data-s]")){const k=x.dataset.s;st.so=st.so==k?k+"a":st.so==k+"a"?"def":k;render();return}
 if(x=g(".band")){const b=+x.dataset.b;shut.has(b)?shut.delete(b):shut.add(b);x.classList.toggle("shut");return}
 if(g("button,a"))return;
 if(x=g(".row[data-k]"))x.classList.toggle("open")});
 document.addEventListener("keydown",e=>{if((e.key=="Enter"||e.key==" ")&&e.target.matches&&e.target.matches(".band,.row[data-k],.srt")){e.preventDefault();e.target.click()}});
-render();
+applyStatic();render();
 
-const SID="1ugc4xuxLJs2gOORXXbyJ8IY2XAueEKd3wPt2LvDV_ek",GID={S:1566520689,A:1253714947,B:1715660288,C:473555020,g:2025400341,r:952842526,k:261311778,st:499100511,srv:675378956};
+const SID="1KTVAqVw26TkwJF7GGJmKjkVEXCK5itqS1OZAIpqxuJ0",GIDS=[1902639631,883691415,1594979378,2118153850,588115840,451513775,2007444671,2009773227,1683635093,1572670724];
 function csv(t){const rows=[];let r=[],f="",q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}else if(c=='"')q=true;else if(c==","){r.push(f);f=""}else if(c=="\n"||c=="\r"){if(c=="\r"&&t[i+1]=="\n")i++;r.push(f);rows.push(r);r=[];f=""}else f+=c}if(f!==""||r.length){r.push(f);rows.push(r)}return rows}
 async function getSheet(gid){const b="https://docs.google.com/spreadsheets/d/"+SID,us=[b+"/export?format=csv&gid="+gid,b+"/gviz/tq?tqx=out:csv&gid="+gid];
 for(const u of us){try{const r=await fetch(u,{cache:"no-store"});if(!r.ok)continue;const t=await r.text();if(t&&!/^\s*<(!doctype|html)/i.test(t))return csv(t)}catch(e){}}return null}
 const num=s=>{const n=parseFloat(String(s==null?"":s).replace(/,/g,"").replace(/[^\d.\-]/g,""));return isNaN(n)?null:n};
-const tk=s=>{s=(s||"").trim().toLowerCase();return s.startsWith("unst")?"u":s.startsWith("over")?"o":s.startsWith("ris")?"r":s.startsWith("decl")?"d":"s"};
+const tk=s=>{s=(s||"").trim().toLowerCase();return s.startsWith("hyp")?"h":s.startsWith("unst")?"u":s.startsWith("over")?"o":s.startsWith("ris")?"r":s.startsWith("decl")?"d":"s"};
+function pStats(rows){const H=hdr(rows,/^value/i);if(!H)return null;const vi=H.ix(/^value/),di=H.ix(/demand/),ti=H.ix(/trend/),ii=H.ix(/info/);const out=[];let sec="";
+for(const r of rows.slice(H.hi+1)){const n=(r[0]||"").trim(),v=num(r[vi]);if(!n)continue;if(v==null){const m=/\(([^)]+)\)/.exec(n);if(m)sec=m[1];continue}out.push([n+(sec&&!/\(/.test(n)?" ("+sec+")":""),v,num(r[di])||0,(r[ii]||"").trim(),tk(r[ti])])}return out}
 const hdr=(rows,re)=>{const hi=rows.findIndex(r=>r.some(c=>re.test((c||"").trim())));if(hi<0)return null;const h=rows[hi].map(c=>(c||"").trim().toLowerCase());return{hi,ix:re=>h.findIndex(c=>re.test(c))}};
 function pUnits(rows){const H=hdr(rows,/^name$/i);if(!H)return null;const vi=H.ix(/^value/),ri=H.ix(/reroll|roll/),di=H.ix(/demand/),ti=H.ix(/trend/),ii=H.ix(/info/);const out=[];let cur=null;
 for(const r of rows.slice(H.hi+1)){const n=(r[0]||"").trim();if(!n)continue;
-if(/tier\s*\/\s*\S+/i.test(n)){const m=/(\d+)/.exec(r[vi]||"");cur=[n.split("/").pop().trim(),n.replace(/\s*Tier\s*/i," ").replace(/\s+/g," ").trim(),m?"от "+m[1]:"",[]];out.push(cur);continue}
+if(/tier\s*\/\s*\S+/i.test(n)){const m=/(\d+)/.exec(r[vi]||"");cur=[n.split("/").pop().trim(),n.replace(/\s*Tier\s*/i," ").replace(/\s+/g," ").trim(),m?m[1]+"+":"",[]];out.push(cur);continue}
 if(!cur)continue;const vr=(r[vi]||"").trim();let v;if(/[a-z]/i.test(vr))v="OC";else{v=num(vr);if(v==null)continue}
 const rr=ri<0?null:num(r[ri]);cur[3].push([n.replace(/\|/g,"/"),v,rr==null?"-":rr,num(r[di])||0,(r[ii]||"").replace(/\|/g,"/").trim(),tk(r[ti])].join("|"))}
 return out.filter(b=>b[3].length).map(b=>[b[0],b[1],b[2],b[3].join("\n")])}
 function pSimple(rows,rr){const H=hdr(rows,/^value/i);if(!H)return null;const vi=H.ix(/^value/),di=H.ix(/demand/),ti=H.ix(/trend/),ii=H.ix(/info/),ri=H.ix(/reroll|roll/);const out=[];
 for(const r of rows.slice(H.hi+1)){const n=(r[0]||"").trim(),v=num(r[vi]);if(!n||v==null)continue;out.push(rr?[n,v,num(r[ri])||0,(r[ii]||"").trim()]:[n,v,num(r[di])||0,(r[ii]||"").trim(),tk(r[ti])])}return out}
-function pSkins(rows){const H=hdr(rows,/^value/i);if(!H)return null;const vi=H.ix(/^value/),di=H.ix(/demand/),ii=H.ix(/info/);const sec=[["Rainbow",[]],["Обычные",[]]];let cur=null;
-for(const r of rows.slice(H.hi+1)){const n=(r[0]||"").trim();if(!n)continue;const v=num(r[vi]);if(v==null){if(/skin/i.test(n))cur=/rainbow/i.test(n)?0:1;continue}if(cur==null)continue;sec[cur][1].push([n,v,num(r[di])||0,(r[ii]||"").trim()])}return sec.filter(x=>x[1].length)}
+function pSkins(rows){const H=hdr(rows,/^value/i);if(!H)return null;const vi=H.ix(/^value/),di=H.ix(/demand/),ii=H.ix(/info/),ti=H.ix(/trend/);const sec=[["Rainbow",[]],["Обычные",[]]];let cur=null;
+for(const r of rows.slice(H.hi+1)){const n=(r[0]||"").trim();if(!n)continue;const v=num(r[vi]);if(v==null){if(/skin/i.test(n))cur=/rainbow/i.test(n)?0:1;continue}if(cur==null)continue;sec[cur][1].push([n,v,num(r[di])||0,(r[ii]||"").trim(),tk(r[ti])])}return sec.filter(x=>x[1].length)}
 function pSrv(rows){return[...rows.flat().join(" ").matchAll(/privateServerLinkCode=(\d+)/g)].map(m=>m[1])}
 let lastSig="",busy=false;
 async function live(){if(busy)return;busy=true;try{
-const ks=["S","A","B","C","g","r","k","st","srv"],res=await Promise.all(ks.map(k=>getSheet(GID[k])));
-const [S,A,B,C,g,r,k,s2,sv]=res;let nt=[],okU=true;
-for(const x of[S,A,B,C]){const p=x&&pUnits(x);if(p&&p.length)nt.push(...p);else okU=false}
-if(!okU)nt=null;
-const ng=g&&pSimple(g),nr=r&&pSimple(r),nk=k&&pSkins(k),ns=s2&&pSimple(s2,1),nv=sv&&pSrv(sv);
+const res=await Promise.all(GIDS.map(getSheet));
+let nt=[],ng,nr,nk,ns,nv=[];
+const TO=["SSS","SS","S+","S","S-","A+","A","A-","B+","B","B-","C+","C","C-"];
+res.forEach(x=>{if(!x)return;const txt=x.flat().join(" ");
+if(/privateServerLinkCode=\d+/.test(txt)){nv.push(...pSrv(x));return}
+const pu=pUnits(x);if(pu&&pu.length){nt.push(...pu);return}
+if(/skin/i.test(txt)){const pk=pSkins(x);if(pk&&pk.length){nk=pk;return}}
+const hh=hdr(x,/^value/i);if(!hh)return;
+if(/\bsss\b/i.test(txt)&&/dmg|spa|rng/i.test(txt)){ns=pStats(x);return}
+const ps=pSimple(x);if(!ps||!ps.length)return;
+if(/bundle|shiny hunter|battle pass|vip/i.test(txt))ng=ps;else if(/relic/i.test(txt))nr=ps});
+nt=nt.length?nt.sort((a,b)=>{const i=TO.indexOf(a[0]),j=TO.indexOf(b[0]);return(i<0?99:i)-(j<0?99:j)}):null;
 const sig=JSON.stringify([nt,ng,nr,nk,ns,nv]);if(sig==lastSig)return;lastSig=sig;
 const op=[...document.querySelectorAll(".row.open")].map(e=>U[+e.dataset.k]&&U[+e.dataset.k].n),L=nmOf(st.L),R=nmOf(st.R);
-if(nt){TIERS=nt;buildU();st.L=ixOf(L);st.R=ixOf(R)}
-if(ng&&ng.length)GP=ng;if(nr&&nr.length)RL=nr;if(nk&&nk.length)SK=nk;if(ns&&ns.length)ST=ns;if(nv&&nv.length)SRV=nv;
+if(nt)TIERS=nt;if(ng&&ng.length)GP=ng;if(nr&&nr.length)RL=nr;if(nk&&nk.length)SK=nk;if(ns&&ns.length)ST=ns;if(nv&&nv.length)SRV=nv;
+buildU();st.L=ixOf(L);st.R=ixOf(R);
 if(st.tab=="calc"){nav();calc()}else{render();document.querySelectorAll(".row[data-k]").forEach(e=>{if(op.includes(U[+e.dataset.k].n))e.classList.add("open")})}
 save()}catch(e){}finally{busy=false}}
 live();setInterval(live,30000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)live()});
 </script></body></html>
+
